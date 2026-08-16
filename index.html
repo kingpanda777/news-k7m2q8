@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AI・不動産ニュース 2026/08/16</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="AI・不動産ニュース">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#f4f5f7" media="(prefers-color-scheme:light)">
+<meta name="theme-color" content="#0f1115" media="(prefers-color-scheme:dark)">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f4f5f7; --card:#ffffff; --text:#16181d; --muted:#6b7280;
+  --line:#e3e5ea; --ph:#dcdfe6; --ai:#4f46e5; --re:#0d9488;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0f1115;--card:#181b21;--text:#e8eaed;--muted:#9aa1ad;
+        --line:#272b33;--ph:#2b303a;--ai:#8b85ff;--re:#3ecfbb}
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic UI",
+    "Noto Sans JP",Meiryo,sans-serif;line-height:1.7}
+.wrap{max-width:720px;margin:0 auto;padding:0 14px 60px}
+[hidden]{display:none!important}
+
+/* ---------------- 一覧 ---------------- */
+header{padding:22px 0 14px}
+h1{font-size:1.25rem;letter-spacing:.02em}
+.stamp{color:var(--muted);font-size:.8rem;margin-top:5px}
+.nav{display:flex;gap:8px;position:sticky;top:0;z-index:5;
+  background:var(--bg);padding:9px 0 11px}
+.nav a{flex:1;text-align:center;text-decoration:none;font-size:.88rem;font-weight:600;
+  padding:8px 0;border-radius:10px;border:1px solid var(--line);
+  color:var(--text);background:var(--card)}
+section{scroll-margin-top:62px}
+section>h2{font-size:.95rem;margin:20px 0 8px;padding-left:10px;
+  border-left:4px solid var(--ai)}
+section.re>h2{border-left-color:var(--re)}
+.count{color:var(--muted);font-weight:400;font-size:.78rem;margin-left:6px}
+.rows{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  overflow:hidden}
+.row{display:flex;gap:11px;align-items:flex-start;padding:11px 12px;
+  text-decoration:none;color:inherit;border-top:1px solid var(--line)}
+.row:first-child{border-top:none}
+.row:active{background:var(--bg)}
+.rthumb{flex:0 0 84px;width:84px;height:60px;border-radius:7px;object-fit:cover;
+  display:block;background:var(--ph)}
+.rph{flex:0 0 84px;width:84px;height:60px;border-radius:7px;background:var(--ph)}
+.rtext{min-width:0;flex:1}
+.rtitle{font-size:.94rem;font-weight:600;line-height:1.45;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.rmeta{margin-top:5px;font-size:.7rem;color:var(--muted)}
+.rmeta b{font-weight:600;color:var(--ai)}
+section.re .rmeta b{color:var(--re)}
+
+/* ---------------- 詳細 ---------------- */
+.detail{padding-bottom:20px}
+.back{display:flex;align-items:center;gap:6px;position:sticky;top:0;z-index:5;
+  background:var(--bg);padding:13px 0;font-size:.88rem;font-weight:600;
+  color:var(--text);text-decoration:none;border-bottom:1px solid var(--line)}
+.dtitle{font-size:1.32rem;font-weight:700;line-height:1.55;margin:18px 0 14px;
+  letter-spacing:.01em}
+.dthumb{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;
+  border-radius:12px;background:var(--ph)}
+.dph{width:100%;aspect-ratio:16/9;border-radius:12px;background:var(--ph)}
+.dmeta{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:14px 0 4px;
+  font-size:.8rem;color:var(--muted)}
+.dmeta .src{font-weight:700;color:var(--ai)}
+.detail.re .dmeta .src{color:var(--re)}
+.also{border:1px solid var(--line);border-radius:999px;padding:1px 9px}
+.dsum{margin:16px 0 22px}
+.dsum p{font-size:1.02rem;line-height:2;margin-bottom:11px}
+.go{display:block;text-align:center;text-decoration:none;font-size:.95rem;
+  font-weight:700;padding:15px;border-radius:12px;
+  background:var(--ai);color:#fff}
+.detail.re .go{background:var(--re)}
+.note{margin-top:13px;font-size:.75rem;color:var(--muted);text-align:center}
+footer{margin-top:30px;padding-top:15px;border-top:1px solid var(--line);
+  color:var(--muted);font-size:.75rem;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div id="list">
+<header>
+<h1>AI・不動産ニュース まとめ</h1>
+<div class="stamp">2026年08月16日 19:17 作成 ／ 全30件</div>
+</header>
+<nav class="nav"><a href="#ai">AI（15）</a><a href="#re">不動産（15）</a></nav>
+<section class="ai" id="ai"><h2>AI<span class="count">15件</span></h2><div class="rows"><a class="row" href="#/item/0"><img class="rthumb" src="https://s.tgstc.com/ogp3/d737b49993c243ae7f169410357a27c0-1200x630.jpeg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">味の素パークの公式アカウント、AIによる補正でぐちゃぐちゃになった「ほんだし」の画像をポストし、批判相次ぐ流れに「ブランド名すら違う」「AINOMOTO」</div><div class="rmeta"><b>はてなブックマーク（テクノロジー）</b>　8/16</div></div></a><a class="row" href="#/item/1"><img class="rthumb" src="https://www.itmedia.co.jp/news/article/ogp/2608/16/2000000555/10002741/2048" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">「Claude」の“見えない透かし”、Anthropicが仕組みを説明 「完全な書き直しなら消える」</div><div class="rmeta"><b>ITmedia AI+</b>　8/16</div></div></a><a class="row" href="#/item/2"><img class="rthumb" src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/Screenshot-2026-08-15-at-4.40.53-PM.png?quality=90&amp;strip=all&amp;crop=8.7465986394558%2C0%2C82.506802721088%2C100&amp;w=1200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">Have a laugh at AI’s expense by roleplaying as a chatbot</div><div class="rmeta"><b>The Verge</b>　8/16</div></div></a><a class="row" href="#/item/3"><img class="rthumb" src="https://article-image-ix.nikkei.com/https%3A%2F%2Fimgix-proxy.n8s.jp%2FDSXZQO3150829010062026000000-1.jpg?auto=compress&amp;bg=FFFF&amp;crop=focalpoint&amp;fit=crop&amp;fm=jpg&amp;h=630&amp;w=1200&amp;s=a43f118fda1a760ea83b33b02ccbf2d2" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">ホンダ、衝突安全技術の開発にAI活用 中国勢対抗へ期間4割短縮</div><div class="rmeta"><b>ニュース検索「AI 活用」</b>　8/16</div></div></a><a class="row" href="#/item/4"><img class="rthumb" src="https://techcrunch.com/wp-content/uploads/2024/01/Magnifying-glasses.jpg?resize=1200,840" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">Anthropic shares more details about how Claude’s new watermarks will work</div><div class="rmeta"><b>TechCrunch</b>　8/16</div></div></a><a class="row" href="#/item/5"><img class="rthumb" src="https://techcrunch.com/wp-content/uploads/2026/08/broken-lock.jpg?resize=1200,823" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">How to tell if your AI platforms’ accounts have been hacked</div><div class="rmeta"><b>TechCrunch</b>　8/16</div></div></a><a class="row" href="#/item/6"><img class="rthumb" src="https://www.itmedia.co.jp/aiplus/article/ogp/2608/15/2000000554/10002735/2048" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">「Qwen3.8-27B」ウェイト公開 一部「Opus 4.6 Max」超えか ライセンスは商用可のApache 2.0</div><div class="rmeta"><b>ITmedia AI+</b>　8/15</div></div></a><a class="row" href="#/item/7"><img class="rthumb" src="https://aeradot.ismcdn.jp/mwimgs/6/6/1200xm/img_663dc88562acbfa5669d9b4bee6d08ee296991.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">AiHUBの生成AIツール「CW Canvas」がByteDance「Seedance 2.5」に対応。IP権利証明でフィルター解除できる「日本初」ツールのクローズドβ版ウェイトリストを公開</div><div class="rmeta"><b>ニュース検索「生成AI」</b>　8/14</div></div></a><a class="row" href="#/item/8"><img class="rthumb" src="https://images.forbesjapan.com/media/article/102485/images/main_image_f395b30380b18efdfe9483780b4ebda7b7958654.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">米不動産王が明かす、AIエージェントで「100万ドル級の売上」を実現した方法</div><div class="rmeta"><b>ニュース検索「不動産 AI」</b>　8/14</div></div></a><a class="row" href="#/item/9"><img class="rthumb" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-7-flash.width-1300.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">Introducing Gemini 3.7 Flash</div><div class="rmeta"><b>Google DeepMind</b>　8/14</div></div></a><a class="row" href="#/item/10"><img class="rthumb" src="https://images.ctfassets.net/kftzwdyauwt9/4BXdV1bAQE16SMC7CjzCyn/a4bb2a0a0433b2b449b6cf9bce7b7fda/the-builders-guide-to-gpt-5-6-option-075-open-graph.png?w=1600&amp;h=900&amp;fit=fill" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">The builder’s guide to GPT‑5.6</div><div class="rmeta"><b>OpenAI</b>　8/13</div></div></a><a class="row" href="#/item/11"><img class="rthumb" src="https://images.ctfassets.net/kftzwdyauwt9/3Hr2P0ohSh8XIvwvdWTiqw/bc17823dc335767da94bbef2e1a90fa2/previewing-ultrafast-mode--seo-v001.png?w=1600&amp;h=900&amp;fit=fill" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed</div><div class="rmeta"><b>OpenAI</b>　8/13</div></div></a><a class="row" href="#/item/12"><img class="rthumb" src="https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Quill&amp;backgroundColor=heather" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">How Claude&#x27;s text watermarking works</div><div class="rmeta"><b>Anthropic</b>　8/13</div></div></a><a class="row" href="#/item/13"><img class="rthumb" src="https://lh3.googleusercontent.com/8RcynTx1ujudyw8Fs05Pv8WJahe2FQ3z1Y7gNHm-xvOTJLdMp9hNDsIIoQbJsnav6evNLgY1iT9B9ercsyIn0U1N51pzScvSfe6IHk2SjDJx-MaVzQ=w1200-h630-n-nu-rw" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">Putting sign language AI into users’ hands</div><div class="rmeta"><b>Google DeepMind</b>　8/12</div></div></a><a class="row" href="#/item/14"><img class="rthumb" src="https://www.anthropic.com/api/opengraph-illustration?name=Node%20Bird&amp;backgroundColor=heather" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">Improving Fable 5 Safeguards</div><div class="rmeta"><b>Anthropic</b>　8/7</div></div></a></div></section>
+<section class="re" id="re"><h2>不動産<span class="count">15件</span></h2><div class="rows"><a class="row" href="#/item/15"><div class="rph"></div><div class="rtext"><div class="rtitle">手軽なネットか地元のプロか！約半数が悩む「傾斜地の家」探し事情</div><div class="rmeta"><b>いえらぶニュース</b>　8/15</div></div></a><a class="row" href="#/item/16"><img class="rthumb" src="https://cdn.jutaku-s.com/8841dc0df00fc44fdd8e5c843846d0c1-1053x630.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">不動産経済研 首都圏マンション 中央値8000万円台に 2026年上半期</div><div class="rmeta"><b>住宅新報web</b>　8/14</div></div></a><a class="row" href="#/item/17"><img class="rthumb" src="https://suumo.jp/journal/wp/wp-content/uploads/2026/08/218964_main.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">「空き家と起業者のマッチング50件超」「ひとり親世帯は家賃3割引き」など”負動産”を最強の地域資源に変える「地域価値を共創する不動産業アワード」受賞7組の常識破りな挑戦</div><div class="rmeta"><b>SUUMOジャーナル</b>　8/14</div></div></a><a class="row" href="#/item/18"><div class="rph"></div><div class="rtext"><div class="rtitle">絶景か危険か？4割が景色を絶賛も2割超は「魅力なし」と一刀両断</div><div class="rmeta"><b>いえらぶニュース</b>　8/14</div></div></a><a class="row" href="#/item/19"><img class="rthumb" src="https://www.re-port.net/ogpimage.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">建設業従事者、依頼断る理由の8割が「労務費」</div><div class="rmeta"><b>R.E.port</b>　8/14</div></div></a><a class="row" href="#/item/20"><img class="rthumb" src="https://www.re-port.net/ogpimage.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">TSR調べ、不動産業の賃上げ実施率は6割弱</div><div class="rmeta"><b>R.E.port</b>　8/14</div></div></a><a class="row" href="#/item/21"><img class="rthumb" src="https://www.re-port.net/ogpimage.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">熊本地震で「企業活動に影響」、九州では過半に</div><div class="rmeta"><b>R.E.port</b>　8/14</div></div></a><a class="row" href="#/item/22"><div class="rph"></div><div class="rtext"><div class="rtitle">【数社限定】「Japanese Garden TV(登録者19万人)」とともに庭園プロデュース事業の提供を開始</div><div class="rmeta"><b>いえらぶニュース</b>　8/14</div></div></a><a class="row" href="#/item/23"><img class="rthumb" src="https://www.re-port.net/ogpimage.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">ヒューリック、インド・デリー近郊で物流倉庫3物件に投資</div><div class="rmeta"><b>R.E.port</b>　8/14</div></div></a><a class="row" href="#/item/24"><img class="rthumb" src="https://cdn.jutaku-s.com/c2b9e2ac2b5ee6cbfe42562558704bd7-640x427.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">東京商工リサーチ調査、7月 不動産業の倒産件数は2カ月ぶり減</div><div class="rmeta"><b>住宅新報web</b>　8/12</div></div></a><a class="row" href="#/item/25"><img class="rthumb" src="https://suumo.jp/journal/wp/wp-content/uploads/2026/08/218826_main.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">【フラット35】の最新利用調査では、中古住宅での利用割合が増加！新築と中古の年収倍率に大きな開きも</div><div class="rmeta"><b>SUUMOジャーナル</b>　8/12</div></div></a><a class="row" href="#/item/26"><img class="rthumb" src="https://cdn.jutaku-s.com/080bd547dd657ac043bfc87f25ed85c0-1000x350.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">レオパレス21、リロエステートと提携 法人向け社宅提案を強化</div><div class="rmeta"><b>住宅新報web</b>　8/12</div></div></a><a class="row" href="#/item/27"><img class="rthumb" src="https://www.mlit.go.jp/common/001391890.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">建設工事受注動態統計調査報告（令和８年６月分）</div><div class="rmeta"><b>国土交通省 報道発表</b>　8/10</div></div></a><a class="row" href="#/item/28"><img class="rthumb" src="https://suumo.jp/journal/wp/wp-content/uploads/2026/07/218747_main.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">旧五輪選手村「HARUMI FLAG」自治会がアツすぎる！ 多様な住人が本気スキルで挑む、盆踊り2万人集客や交通改善など“街の価値向上”戦略 東京・中央区</div><div class="rmeta"><b>SUUMOジャーナル</b>　8/7</div></div></a><a class="row" href="#/item/29"><img class="rthumb" src="https://www.mlit.go.jp/common/001391890.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">新たな『水辺を活かしたまちづくり』が始動&lt;br&gt;～全国11か所の「かわまちづくり」計画を新規登録！～</div><div class="rmeta"><b>国土交通省 報道発表</b>　8/7</div></div></a></div></section>
+<footer>見出しをタップすると要約が開きます。<br>
+要約は各記事の本文をもとに自動生成しています。正確な内容は元記事をご確認ください。</footer>
+</div>
+
+<article class="detail ai" id="item-0" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">味の素パークの公式アカウント、AIによる補正でぐちゃぐちゃになった「ほんだし」の画像をポストし、批判相次ぐ流れに「ブランド名すら違う」「AINOMOTO」</h2>
+<img class="dthumb" src="https://s.tgstc.com/ogp3/d737b49993c243ae7f169410357a27c0-1200x630.jpeg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">はてなブックマーク（テクノロジー）</span><span>2026年8月16日</span></div>
+<div class="dsum"><p>味の素パーク公式が投稿した「めんつゆ」の作り方のポストに注目
+めんつゆが切れてしまって絶体絶命なときはこれを思い出してく…</p></div>
+<a class="go" href="https://togetter.com/li/2733655" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると togetter.com が開きます</div>
+</article>
+<article class="detail ai" id="item-1" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">「Claude」の“見えない透かし”、Anthropicが仕組みを説明 「完全な書き直しなら消える」</h2>
+<img class="dthumb" src="https://www.itmedia.co.jp/news/article/ogp/2608/16/2000000555/10002741/2048" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">ITmedia AI+</span><span>2026年8月16日</span><span class="also">はてなブックマーク（テクノロジー）でも報道</span></div>
+<div class="dsum"><p>「Claude」の“見えない透かし”、Anthropicが仕組みを説明 「完全な書き直しなら消える」
+米Anthropi…</p></div>
+<a class="go" href="https://www.itmedia.co.jp/news/article/2608/16/2000000555/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.itmedia.co.jp が開きます</div>
+</article>
+<article class="detail ai" id="item-2" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">Have a laugh at AI’s expense by roleplaying as a chatbot</h2>
+<img class="dthumb" src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/Screenshot-2026-08-15-at-4.40.53-PM.png?quality=90&amp;strip=all&amp;crop=8.7465986394558%2C0%2C82.506802721088%2C100&amp;w=1200" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">The Verge</span><span>2026年8月16日</span></div>
+<div class="dsum"><p>Your AI Slop Bores Me is brilliant in its simplicity. There …</p></div>
+<a class="go" href="https://www.theverge.com/entertainment/980502/roleplay-as-an-ai-chatbot" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.theverge.com が開きます</div>
+</article>
+<article class="detail ai" id="item-3" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">ホンダ、衝突安全技術の開発にAI活用 中国勢対抗へ期間4割短縮</h2>
+<img class="dthumb" src="https://article-image-ix.nikkei.com/https%3A%2F%2Fimgix-proxy.n8s.jp%2FDSXZQO3150829010062026000000-1.jpg?auto=compress&amp;bg=FFFF&amp;crop=focalpoint&amp;fit=crop&amp;fm=jpg&amp;h=630&amp;w=1200&amp;s=a43f118fda1a760ea83b33b02ccbf2d2" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">ニュース検索「AI 活用」</span><span>2026年8月16日</span></div>
+<div class="dsum"><p>ホンダは自動車の安全技術開発で人工知能（AI）を活用する。衝突安全対策などでAIが瞬時に車両のデザインや設計の修正点を複…</p></div>
+<a class="go" href="https://www.nikkei.com/article/DGXZQOUC10CKM0Q6A610C2000000/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.nikkei.com が開きます</div>
+</article>
+<article class="detail ai" id="item-4" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">Anthropic shares more details about how Claude’s new watermarks will work</h2>
+<img class="dthumb" src="https://techcrunch.com/wp-content/uploads/2024/01/Magnifying-glasses.jpg?resize=1200,840" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">TechCrunch</span><span>2026年8月16日</span></div>
+<div class="dsum"><p>Anthropic published a blog post Friday seeking to answer som…</p></div>
+<a class="go" href="https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると techcrunch.com が開きます</div>
+</article>
+<article class="detail ai" id="item-5" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">How to tell if your AI platforms’ accounts have been hacked</h2>
+<img class="dthumb" src="https://techcrunch.com/wp-content/uploads/2026/08/broken-lock.jpg?resize=1200,823" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">TechCrunch</span><span>2026年8月16日</span></div>
+<div class="dsum"><p>Just like any other online service, hackers can target and b…</p></div>
+<a class="go" href="https://techcrunch.com/2026/08/15/how-to-tell-if-your-ai-platforms-accounts-have-been-hacked/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると techcrunch.com が開きます</div>
+</article>
+<article class="detail ai" id="item-6" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">「Qwen3.8-27B」ウェイト公開 一部「Opus 4.6 Max」超えか ライセンスは商用可のApache 2.0</h2>
+<img class="dthumb" src="https://www.itmedia.co.jp/aiplus/article/ogp/2608/15/2000000554/10002735/2048" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">ITmedia AI+</span><span>2026年8月15日</span></div>
+<div class="dsum"><p>「Qwen3.8-27B」ウェイト公開 一部「Opus 4.6 Max」超えか ライセンスは商用可のApache 2.0…</p></div>
+<a class="go" href="https://www.itmedia.co.jp/aiplus/article/2608/15/2000000554/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.itmedia.co.jp が開きます</div>
+</article>
+<article class="detail ai" id="item-7" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">AiHUBの生成AIツール「CW Canvas」がByteDance「Seedance 2.5」に対応。IP権利証明でフィルター解除できる「日本初」ツールのクローズドβ版ウェイトリストを公開</h2>
+<img class="dthumb" src="https://aeradot.ismcdn.jp/mwimgs/6/6/1200xm/img_663dc88562acbfa5669d9b4bee6d08ee296991.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">ニュース検索「生成AI」</span><span>2026年8月14日</span></div>
+<div class="dsum"><p>- AiHUB株式会社
+AiHUB株式会社（本社：東京都千代田区、代表取締役CEO：薮崎 宏晃、以下AiHUB）は、生成…</p></div>
+<a class="go" href="https://dot.asahi.com/articles/-/290152?page=1" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると dot.asahi.com が開きます</div>
+</article>
+<article class="detail ai" id="item-8" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">米不動産王が明かす、AIエージェントで「100万ドル級の売上」を実現した方法</h2>
+<img class="dthumb" src="https://images.forbesjapan.com/media/article/102485/images/main_image_f395b30380b18efdfe9483780b4ebda7b7958654.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">ニュース検索「不動産 AI」</span><span>2026年8月14日</span></div>
+<div class="dsum"><p>ChatGPTに「AIで稼ぐ方法」を尋ねている人をよく見かける。
+そして、彼らが目にしている答えはおそらく、どれも使い回…</p></div>
+<a class="go" href="https://forbesjapan.com/articles/detail/102485" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると forbesjapan.com が開きます</div>
+</article>
+<article class="detail ai" id="item-9" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">Introducing Gemini 3.7 Flash</h2>
+<img class="dthumb" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-7-flash.width-1300.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">Google DeepMind</span><span>2026年8月14日</span></div>
+<div class="dsum"><p>Introducing Gemini 3.7 Flash
+Today, we’re building on the pr…</p></div>
+<a class="go" href="https://deepmind.google/blog/introducing-gemini-3-7-flash/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると deepmind.google が開きます</div>
+</article>
+<article class="detail ai" id="item-10" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">The builder’s guide to GPT‑5.6</h2>
+<img class="dthumb" src="https://images.ctfassets.net/kftzwdyauwt9/4BXdV1bAQE16SMC7CjzCyn/a4bb2a0a0433b2b449b6cf9bce7b7fda/the-builders-guide-to-gpt-5-6-option-075-open-graph.png?w=1600&amp;h=900&amp;fit=fill" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">OpenAI</span><span>2026年8月13日</span></div>
+<div class="dsum"><p>The builder’s guide to GPT‑5.6
+Technical lessons from startu…</p></div>
+<a class="go" href="https://openai.com/index/builders-guide-to-gpt-5-6" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると openai.com が開きます</div>
+</article>
+<article class="detail ai" id="item-11" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed</h2>
+<img class="dthumb" src="https://images.ctfassets.net/kftzwdyauwt9/3Hr2P0ohSh8XIvwvdWTiqw/bc17823dc335767da94bbef2e1a90fa2/previewing-ultrafast-mode--seo-v001.png?w=1600&amp;h=900&amp;fit=fill" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">OpenAI</span><span>2026年8月13日</span></div>
+<div class="dsum"><p>Today, we’re sharing an early look at Ultrafast, a new servi…</p></div>
+<a class="go" href="https://openai.com/index/previewing-ultrafast" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると openai.com が開きます</div>
+</article>
+<article class="detail ai" id="item-12" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">How Claude&#x27;s text watermarking works</h2>
+<img class="dthumb" src="https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Quill&amp;backgroundColor=heather" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">Anthropic</span><span>2026年8月13日</span></div>
+<div class="dsum"><p>How Claude’s text watermark works
+Future Claude models will …</p></div>
+<a class="go" href="https://www.anthropic.com/news/claude-text-watermark" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.anthropic.com が開きます</div>
+</article>
+<article class="detail ai" id="item-13" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">Putting sign language AI into users’ hands</h2>
+<img class="dthumb" src="https://lh3.googleusercontent.com/8RcynTx1ujudyw8Fs05Pv8WJahe2FQ3z1Y7gNHm-xvOTJLdMp9hNDsIIoQbJsnav6evNLgY1iT9B9ercsyIn0U1N51pzScvSfe6IHk2SjDJx-MaVzQ=w1200-h630-n-nu-rw" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">Google DeepMind</span><span>2026年8月12日</span></div>
+<div class="dsum"><p>Building with the community
+We believe in building with the …</p></div>
+<a class="go" href="https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると deepmind.google が開きます</div>
+</article>
+<article class="detail ai" id="item-14" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">Improving Fable 5 Safeguards</h2>
+<img class="dthumb" src="https://www.anthropic.com/api/opengraph-illustration?name=Node%20Bird&amp;backgroundColor=heather" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">Anthropic</span><span>2026年8月7日</span></div>
+<div class="dsum"><p>Improving Fable 5&#x27;s biology safeguards
+We’re making updates …</p></div>
+<a class="go" href="https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.anthropic.com が開きます</div>
+</article>
+<article class="detail re" id="item-15" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">手軽なネットか地元のプロか！約半数が悩む「傾斜地の家」探し事情</h2>
+<div class="dph"></div>
+<div class="dmeta"><span class="src">いえらぶニュース</span><span>2026年8月15日</span></div>
+<div class="dsum"><p>（株）ドリームプランニング（神奈川県横浜市中区／代表取締役：高橋樹人）が運営する不動産の悩み解決サイト「URUHOME」…</p></div>
+<a class="go" href="https://news.ielove.co.jp/66199/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると news.ielove.co.jp が開きます</div>
+</article>
+<article class="detail re" id="item-16" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">不動産経済研 首都圏マンション 中央値8000万円台に 2026年上半期</h2>
+<img class="dthumb" src="https://cdn.jutaku-s.com/8841dc0df00fc44fdd8e5c843846d0c1-1053x630.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">住宅新報web</span><span>2026年8月14日</span></div>
+<div class="dsum"><p>不動産経済研 首都圏マンション 中央値8000万円台に 2026年上半期
+不動産経済研究所が8月13日に公表した調査結果…</p></div>
+<a class="go" href="https://www.jutaku-s.com/news/id/105058" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.jutaku-s.com が開きます</div>
+</article>
+<article class="detail re" id="item-17" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">「空き家と起業者のマッチング50件超」「ひとり親世帯は家賃3割引き」など”負動産”を最強の地域資源に変える「地域価値を共創する不動産業アワード」受賞7組の常識破りな挑戦</h2>
+<img class="dthumb" src="https://suumo.jp/journal/wp/wp-content/uploads/2026/08/218964_main.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">SUUMOジャーナル</span><span>2026年8月14日</span></div>
+<div class="dsum"><p>2026年6月18日、都内で熱気あふれる「地域価値共創シンポジウム2026」が開催されました。
+冒頭、金子恭之国土交通大…</p></div>
+<a class="go" href="https://suumo.jp/journal/2026/08/14/218964/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると suumo.jp が開きます</div>
+</article>
+<article class="detail re" id="item-18" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">絶景か危険か？4割が景色を絶賛も2割超は「魅力なし」と一刀両断</h2>
+<div class="dph"></div>
+<div class="dmeta"><span class="src">いえらぶニュース</span><span>2026年8月14日</span></div>
+<div class="dsum"><p>（株）ドリームプランニング（神奈川県横浜市中区／代表取締役：高橋樹人）が運営する不動産の悩み解決サイト「負動産買取センタ…</p></div>
+<a class="go" href="https://news.ielove.co.jp/66191/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると news.ielove.co.jp が開きます</div>
+</article>
+<article class="detail re" id="item-19" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">建設業従事者、依頼断る理由の8割が「労務費」</h2>
+<img class="dthumb" src="https://www.re-port.net/ogpimage.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">R.E.port</span><span>2026年8月14日</span></div>
+<div class="dsum"><p>建設業に特化した人材マッチングを手掛ける（株）助太刀の調査研究部門である助太刀総研は14日、建設業従事者を対象とした「元…</p></div>
+<a class="go" href="https://www.re-port.net/article/news/0000082615/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.re-port.net が開きます</div>
+</article>
+<article class="detail re" id="item-20" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">TSR調べ、不動産業の賃上げ実施率は6割弱</h2>
+<img class="dthumb" src="https://www.re-port.net/ogpimage.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">R.E.port</span><span>2026年8月14日</span></div>
+<div class="dsum"><p>（株）東京商工リサーチは14日、2026年度の「賃上げに関するアンケート」の結果を公表した。7月31日～8月11日、イン…</p></div>
+<a class="go" href="https://www.re-port.net/article/news/0000082617/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.re-port.net が開きます</div>
+</article>
+<article class="detail re" id="item-21" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">熊本地震で「企業活動に影響」、九州では過半に</h2>
+<img class="dthumb" src="https://www.re-port.net/ogpimage.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">R.E.port</span><span>2026年8月14日</span></div>
+<div class="dsum"><p>（株）帝国データバンクは14日、「令和8年熊本地震の影響と防災に関する企業アンケート」の結果をとりまとめ、発表した。
+調…</p></div>
+<a class="go" href="https://www.re-port.net/article/news/0000082612/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.re-port.net が開きます</div>
+</article>
+<article class="detail re" id="item-22" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">【数社限定】「Japanese Garden TV(登録者19万人)」とともに庭園プロデュース事業の提供を開始</h2>
+<div class="dph"></div>
+<div class="dmeta"><span class="src">いえらぶニュース</span><span>2026年8月14日</span></div>
+<div class="dsum"><p>【数社限定】「Japanese Garden TV(登録者19万人)」とともに庭園プロデュース事業の提供を開始
+株式会社…</p></div>
+<a class="go" href="https://news.ielove.co.jp/66197/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると news.ielove.co.jp が開きます</div>
+</article>
+<article class="detail re" id="item-23" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">ヒューリック、インド・デリー近郊で物流倉庫3物件に投資</h2>
+<img class="dthumb" src="https://www.re-port.net/ogpimage.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">R.E.port</span><span>2026年8月14日</span></div>
+<div class="dsum"><p>ヒューリック（株）は13日、インド・デリー近郊の産業不動産「ファルクナガールPJ」、「キジュリPJ」、「ジャムワズPJ」…</p></div>
+<a class="go" href="https://www.re-port.net/article/news/0000082616/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.re-port.net が開きます</div>
+</article>
+<article class="detail re" id="item-24" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">東京商工リサーチ調査、7月 不動産業の倒産件数は2カ月ぶり減</h2>
+<img class="dthumb" src="https://cdn.jutaku-s.com/c2b9e2ac2b5ee6cbfe42562558704bd7-640x427.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">住宅新報web</span><span>2026年8月12日</span></div>
+<div class="dsum"><p>東京商工リサーチ調査、7月 不動産業の倒産件数は2カ月ぶり減
+東京商工リサーチが8月10日に公表した「不動産業の倒産状況…</p></div>
+<a class="go" href="https://www.jutaku-s.com/news/id/38783" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.jutaku-s.com が開きます</div>
+</article>
+<article class="detail re" id="item-25" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">【フラット35】の最新利用調査では、中古住宅での利用割合が増加！新築と中古の年収倍率に大きな開きも</h2>
+<img class="dthumb" src="https://suumo.jp/journal/wp/wp-content/uploads/2026/08/218826_main.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">SUUMOジャーナル</span><span>2026年8月12日</span></div>
+<div class="dsum"><p>まず、【フラット35】についておさらいしておこう。
+【フラット35】は、住宅金融支援機構と民間金融機関が提携して、ユーザ…</p></div>
+<a class="go" href="https://suumo.jp/journal/2026/08/12/218826/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると suumo.jp が開きます</div>
+</article>
+<article class="detail re" id="item-26" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">レオパレス21、リロエステートと提携 法人向け社宅提案を強化</h2>
+<img class="dthumb" src="https://cdn.jutaku-s.com/080bd547dd657ac043bfc87f25ed85c0-1000x350.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">住宅新報web</span><span>2026年8月12日</span></div>
+<div class="dsum"><p>レオパレス21、リロエステートと提携 法人向け社宅提案を強化
+レオパレス21はこのほど、リログループ子会社のリロエステー…</p></div>
+<a class="go" href="https://www.jutaku-s.com/news/id/38776" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.jutaku-s.com が開きます</div>
+</article>
+<article class="detail re" id="item-27" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">建設工事受注動態統計調査報告（令和８年６月分）</h2>
+<img class="dthumb" src="https://www.mlit.go.jp/common/001391890.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">国土交通省 報道発表</span><span>2026年8月10日</span></div>
+<div class="dsum"><p>令和8年8月10日
+　「建設工事受注動態統計調査」は、我が国の建設業者の建設工事受注動向及び公共機関・民間等からの毎月の…</p></div>
+<a class="go" href="https://www.mlit.go.jp/report/press/joho04_hh_001385.html" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.mlit.go.jp が開きます</div>
+</article>
+<article class="detail re" id="item-28" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">旧五輪選手村「HARUMI FLAG」自治会がアツすぎる！ 多様な住人が本気スキルで挑む、盆踊り2万人集客や交通改善など“街の価値向上”戦略 東京・中央区</h2>
+<img class="dthumb" src="https://suumo.jp/journal/wp/wp-content/uploads/2026/07/218747_main.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">SUUMOジャーナル</span><span>2026年8月7日</span></div>
+<div class="dsum"><p>HARUMI FLAGは2021年の東京オリンピック・パラリンピックで選手村として使われた、中央区晴海5丁目の土地を再生…</p></div>
+<a class="go" href="https://suumo.jp/journal/2026/08/07/218747/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると suumo.jp が開きます</div>
+</article>
+<article class="detail re" id="item-29" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">新たな『水辺を活かしたまちづくり』が始動&lt;br&gt;～全国11か所の「かわまちづくり」計画を新規登録！～</h2>
+<img class="dthumb" src="https://www.mlit.go.jp/common/001391890.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">国土交通省 報道発表</span><span>2026年8月7日</span></div>
+<div class="dsum"><p>新たな『水辺を活かしたまちづくり』が始動
+～全国11か所の「かわまちづくり」計画を新規登録！～
+ 
+令和8年8月7日
+《…</p></div>
+<a class="go" href="https://www.mlit.go.jp/report/press/mizukokudo04_hh_000312.html" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.mlit.go.jp が開きます</div>
+</article>
+
+</div>
+<script>
+(function(){
+  var list=document.getElementById('list'),pos=0,current=null;
+  function hideAll(){
+    var a=document.getElementsByClassName('detail');
+    for(var i=0;i<a.length;i++){a[i].hidden=true;}
+  }
+  function showItem(id){
+    var d=document.getElementById('item-'+id);
+    if(!d){return false;}
+    if(!list.hidden){pos=window.pageYOffset||document.documentElement.scrollTop||0;}
+    hideAll();list.hidden=true;d.hidden=false;current=id;window.scrollTo(0,0);
+    return true;
+  }
+  function showList(){hideAll();list.hidden=false;current=null;window.scrollTo(0,pos);}
+  function setHash(h){try{location.hash=h;}catch(e){}}
+  document.addEventListener('click',function(e){
+    var t=e.target,a=null;
+    while(t&&t!==document){if(t.tagName==='A'){a=t;break;}t=t.parentNode;}
+    if(!a){return;}
+    var href=a.getAttribute('href')||'';
+    var m=href.match(/^#\/item\/(\d+)$/);
+    if(m){e.preventDefault();if(showItem(m[1])){setHash(href);}return;}
+    if(href==='#/'){e.preventDefault();showList();setHash('#/');}
+  });
+  window.addEventListener('hashchange',function(){
+    var m=(location.hash||'').match(/^#\/item\/(\d+)$/);
+    if(m){showItem(m[1]);}
+    else if(current!==null){showList();}
+  });
+  var start=(location.hash||'').match(/^#\/item\/(\d+)$/);
+  if(start){showItem(start[1]);}
+})();
+</script>
+</body>
+</html>
