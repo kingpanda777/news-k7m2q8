@@ -57,6 +57,25 @@ section.re>h2{border-left-color:var(--re)}
 .rmeta b{font-weight:600;color:var(--ai)}
 section.re .rmeta b{color:var(--re)}
 
+/* 新着と既読の区切り */
+.newlabel{display:flex;align-items:center;gap:8px;margin:14px 0 8px;
+  font-size:.78rem;font-weight:700;color:var(--ai)}
+section.re .newlabel{color:var(--re)}
+.newlabel::after{content:"";flex:1;height:1px;background:var(--line)}
+.empty{padding:14px 12px;font-size:.85rem;color:var(--muted);
+  background:var(--card);border:1px solid var(--line);border-radius:12px}
+.seen{margin-top:16px}
+.seen>summary{list-style:none;cursor:pointer;display:flex;align-items:center;
+  gap:8px;padding:12px 13px;font-size:.83rem;font-weight:600;color:var(--muted);
+  background:var(--card);border:1px solid var(--line);border-radius:12px}
+.seen>summary::-webkit-details-marker{display:none}
+.seen>summary::after{content:"▼";margin-left:auto;font-size:.7rem;
+  transition:transform .15s}
+.seen[open]>summary::after{transform:rotate(180deg)}
+.seen[open]>summary{border-radius:12px 12px 0 0;border-bottom:none}
+.seen[open] .rows{border-radius:0 0 12px 12px;border-top:none}
+.seen .row{opacity:.72}
+
 /* ---------------- 詳細 ---------------- */
 .detail{padding-bottom:20px}
 .back{display:flex;align-items:center;gap:6px;position:sticky;top:0;z-index:5;
@@ -89,151 +108,232 @@ footer{margin-top:30px;padding-top:15px;border-top:1px solid var(--line);
 <div id="list">
 <header>
 <h1>AI・不動産ニュース まとめ</h1>
-<div class="stamp">2026年08月17日 06:37 作成 ／ 全30件</div>
+<div class="stamp">2026年08月17日 21:22 作成 ／ 新着24件・全30件</div>
 </header>
-<nav class="nav"><a href="#ai">AI（15）</a><a href="#re">不動産（15）</a></nav>
-<section class="ai" id="ai"><h2>AI<span class="count">15件</span></h2><div class="rows"><a class="row" href="#/item/0"><img class="rthumb" src="https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK149_AI_01.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.732984293194%2C100%2C78.534031413613&amp;w=1200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">OpenAI、「preparedness」チームを解体したと報道</div><div class="rmeta"><b>The Verge</b>　8/17</div></div></a><a class="row" href="#/item/1"><img class="rthumb" src="https://techcrunch.com/wp-content/uploads/2024/04/Stripe-resized.webp?resize=1200,674" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">Stripe、AIゲートウェイのOpenRouterを70億ドル超で買収へ</div><div class="rmeta"><b>TechCrunch</b>　8/17</div></div></a><a class="row" href="#/item/2"><img class="rthumb" src="https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2239280474.jpg?resize=1200,800" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">人々がザッカーバーグの描くAIの未来を信じない理由</div><div class="rmeta"><b>TechCrunch</b>　8/17</div></div></a><a class="row" href="#/item/3"><img class="rthumb" src="https://image.itmedia.co.jp/ait/articles/2608/17/cover_news020.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">Claude、Codex、Qwen……そのAI用語、どう読む？ 読み方クイズ30問</div><div class="rmeta"><b>ITmedia AI+</b>　8/17</div></div></a><a class="row" href="#/item/4"><img class="rthumb" src="https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK155_OPEN_AI_4_CVirginia_C.png?quality=90&amp;strip=all&amp;crop=0%2C10.742221417566%2C100%2C78.515557164868&amp;w=1200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">ChatGPTの新機能「Computer History」、クリックやキー入力を記録し学習</div><div class="rmeta"><b>The Verge</b>　8/16</div></div></a><a class="row" href="#/item/5"><img class="rthumb" src="https://res.cloudinary.com/gb-cache/image/upload/prod/h0py9vbf0q585h2dsmam6iat" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">AIバブル第2波がこれからやってくる！「絶好の買い場」と銘柄を予測</div><div class="rmeta"><b>ニュース検索「生成AI」</b>　8/16</div></div></a><a class="row" href="#/item/6"><img class="rthumb" src="https://i.gzn.jp/img/2026/08/16/ai-text-watermarking/00.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">AI生成テキストの「透かし」が埋め込まれる仕組み</div><div class="rmeta"><b>はてなブックマーク（テクノロジー）</b>　8/16</div></div></a><a class="row" href="#/item/7"><img class="rthumb" src="https://www.itmedia.co.jp/news/article/ogp/2608/16/2000000555/10002741/2048" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">「Claude」の“見えない透かし”、Anthropicが仕組みを説明 「完全な書き直しなら消える」</div><div class="rmeta"><b>ITmedia AI+</b>　8/16</div></div></a><a class="row" href="#/item/8"><img class="rthumb" src="https://article-image-ix.nikkei.com/https%3A%2F%2Fimgix-proxy.n8s.jp%2FDSXZQO3150829010062026000000-1.jpg?auto=compress&amp;bg=FFFF&amp;crop=focalpoint&amp;fit=crop&amp;fm=jpg&amp;h=630&amp;w=1200&amp;s=a43f118fda1a760ea83b33b02ccbf2d2" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">ホンダ、衝突安全技術の開発にAI活用 中国勢対抗へ期間4割短縮</div><div class="rmeta"><b>ニュース検索「AI 活用」</b>　8/16</div></div></a><a class="row" href="#/item/9"><img class="rthumb" src="https://images.forbesjapan.com/media/article/102485/images/main_image_f395b30380b18efdfe9483780b4ebda7b7958654.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">米不動産王が明かす、AIエージェントで「100万ドル級の売上」を実現した方法</div><div class="rmeta"><b>ニュース検索「不動産 AI」</b>　8/14</div></div></a><a class="row" href="#/item/10"><img class="rthumb" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-7-flash.width-1300.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">「Gemini 3.7 Flash」を発表</div><div class="rmeta"><b>Google DeepMind</b>　8/14</div></div></a><a class="row" href="#/item/11"><img class="rthumb" src="https://images.ctfassets.net/kftzwdyauwt9/4BXdV1bAQE16SMC7CjzCyn/a4bb2a0a0433b2b449b6cf9bce7b7fda/the-builders-guide-to-gpt-5-6-option-075-open-graph.png?w=1600&amp;h=900&amp;fit=fill" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">「GPT-5.6」開発者向けガイド</div><div class="rmeta"><b>OpenAI</b>　8/13</div></div></a><a class="row" href="#/item/12"><img class="rthumb" src="https://images.ctfassets.net/kftzwdyauwt9/3Hr2P0ohSh8XIvwvdWTiqw/bc17823dc335767da94bbef2e1a90fa2/previewing-ultrafast-mode--seo-v001.png?w=1600&amp;h=900&amp;fit=fill" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">Ultrafastモードを先行公開、GPT-5.6 Solが最大14倍高速に</div><div class="rmeta"><b>OpenAI</b>　8/13</div></div></a><a class="row" href="#/item/13"><img class="rthumb" src="https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Quill&amp;backgroundColor=heather" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">Claudeのテキスト電子透かしの仕組み</div><div class="rmeta"><b>Anthropic</b>　8/13</div></div></a><a class="row" href="#/item/14"><img class="rthumb" src="https://lh3.googleusercontent.com/8RcynTx1ujudyw8Fs05Pv8WJahe2FQ3z1Y7gNHm-xvOTJLdMp9hNDsIIoQbJsnav6evNLgY1iT9B9ercsyIn0U1N51pzScvSfe6IHk2SjDJx-MaVzQ=w1200-h630-n-nu-rw" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">手話AIをユーザーの手に</div><div class="rmeta"><b>Google DeepMind</b>　8/12</div></div></a></div></section>
-<section class="re" id="re"><h2>不動産<span class="count">15件</span></h2><div class="rows"><a class="row" href="#/item/15"><img class="rthumb" src="https://cdn.jutaku-s.com/0cea2a77d3f4c293e4dcfca120ef39c8-640x452.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">埼玉・鶴ヶ島市で第1号の空き家跡地を地域公園に タミヤホーム</div><div class="rmeta"><b>住宅新報web</b>　8/17</div></div></a><a class="row" href="#/item/16"><div class="rph"></div><div class="rtext"><div class="rtitle">手軽なネットか地元のプロか！約半数が悩む「傾斜地の家」探し事情</div><div class="rmeta"><b>いえらぶニュース</b>　8/15</div></div></a><a class="row" href="#/item/17"><img class="rthumb" src="https://cdn.jutaku-s.com/8841dc0df00fc44fdd8e5c843846d0c1-1053x630.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">不動産経済研 首都圏マンション 中央値8000万円台に 2026年上半期</div><div class="rmeta"><b>住宅新報web</b>　8/14</div></div></a><a class="row" href="#/item/18"><img class="rthumb" src="https://suumo.jp/journal/wp/wp-content/uploads/2026/08/218964_main.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">「空き家と起業者のマッチング50件超」「ひとり親世帯は家賃3割引き」など”負動産”を最強の地域資源に変える「地域価値を共創する不動産業アワード」受賞7組の常識破りな挑戦</div><div class="rmeta"><b>SUUMOジャーナル</b>　8/14</div></div></a><a class="row" href="#/item/19"><div class="rph"></div><div class="rtext"><div class="rtitle">絶景か危険か？4割が景色を絶賛も2割超は「魅力なし」と一刀両断</div><div class="rmeta"><b>いえらぶニュース</b>　8/14</div></div></a><a class="row" href="#/item/20"><img class="rthumb" src="https://www.re-port.net/ogpimage.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">ヒューリック、インド・デリー近郊で物流倉庫3物件に投資</div><div class="rmeta"><b>R.E.port</b>　8/14</div></div></a><a class="row" href="#/item/21"><img class="rthumb" src="https://www.re-port.net/ogpimage.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">仕入れ加速し営業増益／地主26年12月期2Q</div><div class="rmeta"><b>R.E.port</b>　8/14</div></div></a><a class="row" href="#/item/22"><img class="rthumb" src="https://www.re-port.net/ogpimage.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">介護施設の月額利用料、20万円未満の回答が6割超</div><div class="rmeta"><b>R.E.port</b>　8/14</div></div></a><a class="row" href="#/item/23"><div class="rph"></div><div class="rtext"><div class="rtitle">人生100年時代。住まいは「買うもの」から「育てるもの」へ。</div><div class="rmeta"><b>いえらぶニュース</b>　8/14</div></div></a><a class="row" href="#/item/24"><img class="rthumb" src="https://www.re-port.net/ogpimage.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">大幅な減収減益に／And DoHD26年6月期</div><div class="rmeta"><b>R.E.port</b>　8/14</div></div></a><a class="row" href="#/item/25"><div class="rph"></div><div class="rtext"><div class="rtitle">逆風の住宅市場で“縮小”ではなく“拡張”を――『BLUEPRINT 2036』の半年の進捗と次の一手を報告、LIFEFUNDが下期経営方針発表会を実施</div><div class="rmeta"><b>いえらぶニュース</b>　8/14</div></div></a><a class="row" href="#/item/26"><img class="rthumb" src="https://cdn.jutaku-s.com/c2b9e2ac2b5ee6cbfe42562558704bd7-640x427.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">東京商工リサーチ調査、7月 不動産業の倒産件数は2カ月ぶり減</div><div class="rmeta"><b>住宅新報web</b>　8/12</div></div></a><a class="row" href="#/item/27"><img class="rthumb" src="https://suumo.jp/journal/wp/wp-content/uploads/2026/08/218826_main.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">【フラット35】の最新利用調査では、中古住宅での利用割合が増加！新築と中古の年収倍率に大きな開きも</div><div class="rmeta"><b>SUUMOジャーナル</b>　8/12</div></div></a><a class="row" href="#/item/28"><img class="rthumb" src="https://www.mlit.go.jp/common/001391890.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">建設工事受注動態統計調査報告（令和８年６月分）</div><div class="rmeta"><b>国土交通省 報道発表</b>　8/10</div></div></a><a class="row" href="#/item/29"><img class="rthumb" src="https://suumo.jp/journal/wp/wp-content/uploads/2026/07/218747_main.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">旧五輪選手村「HARUMI FLAG」自治会がアツすぎる！ 多様な住人が本気スキルで挑む、盆踊り2万人集客や交通改善など“街の価値向上”戦略 東京・中央区</div><div class="rmeta"><b>SUUMOジャーナル</b>　8/7</div></div></a></div></section>
+<nav class="nav"><a href="#ai">AI（15）</a><a href="#re">不動産（9）</a></nav>
+<section class="ai" id="ai"><h2>AI<span class="count">新着15件</span></h2><div class="rows"><a class="row" href="#/item/0"><img class="rthumb" src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/268628_Pet_week_CVirginia_LITTER_ROBOT.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.732984293194%2C100%2C78.534031413613&amp;w=1200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">WhiskerのAI搭載猫トイレロボット、うちの2匹の猫を混同してしまう</div><div class="rmeta"><b>The Verge</b>　8/17</div></div></a><a class="row" href="#/item/1"><img class="rthumb" src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/01/STKB364_CLAUDE_2_C_96d15c.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.732984293194%2C100%2C78.534031413613&amp;w=1200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">Anthropic、Claudeの見えないテキスト透かしの仕組みを説明</div><div class="rmeta"><b>The Verge</b>　8/17</div></div></a><a class="row" href="#/item/2"><img class="rthumb" src="https://www.itmedia.co.jp/aiplus/article/ogp/2608/17/2000000567/10002815/2048" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">人型ロボが“人間超え”――助走なしで高さ2mのジャンプ、時速45kmで走行も 中国Unitreeが開発中の新モデルを公開</div><div class="rmeta"><b>ITmedia AI+</b>　8/17</div></div></a><a class="row" href="#/item/3"><img class="rthumb" src="https://www.itmedia.co.jp/aiplus/article/ogp/2608/17/2000000441/10002108/2048" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">なぜPFNは「国産AI」をゼロから開発するのか 担当者に聞く“自家製ならではの利点”</div><div class="rmeta"><b>ITmedia AI+</b>　8/17</div></div></a><a class="row" href="#/item/4"><img class="rthumb" src="https://images.forbesjapan.com/media/article/101891/images/main_image_7988694e6f5b38ba7b6ba226ad90b1fbfc6f6b78.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">AI活用で一人の起業が容易に 職を失うリスクを回避する副業の始め方</div><div class="rmeta"><b>ニュース検索「AI 活用」</b>　8/17</div></div></a><a class="row" href="#/item/5"><img class="rthumb" src="https://images.ctfassets.net/kftzwdyauwt9/3ui6fuXDbnmCfn6AqK9xkn/b8f4d1d81779680070c147b1ae685c9f/new-policy-ideas-for-the-intelligence-age--seo-v001.png?w=1600&amp;h=900&amp;fit=fill" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">OpenAI、「インテリジェンス時代」に向けた新政策アイデアに助成金</div><div class="rmeta"><b>OpenAI</b>　8/17</div></div></a><a class="row" href="#/item/6"><img class="rthumb" src="https://imgopt.asahi.com/ogp/AS20260817002892_comm.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">駐禁除外の標章、生成AIで偽造か 「見た目で分からないほど精巧」</div><div class="rmeta"><b>ニュース検索「生成AI」</b>　8/17</div></div></a><a class="row" href="#/item/7"><img class="rthumb" src="https://s.tgstc.com/ogp3/41ba413506fcd415596c2c5dbb7d22e2-1200x630.jpeg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">差別や偏見が生まれる「構造」を問うてはいけない？全国中学生人権作文コンテストの受賞作品をAIに分析させたら「内閣総理大臣賞を獲る13ヶ条」ができた話</div><div class="rmeta"><b>はてなブックマーク（テクノロジー）</b>　8/17</div></div></a><a class="row" href="#/item/8"><img class="rthumb" src="https://mmx.prnasia.com/media/MS1828169/ATLANT-3D.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">ATLANT 3D、「NANOFABRICATOR® PRO」を発売：AIを活用した材料探索向けの世界初かつ唯一の物理プラットフォーム：時事ドットコム</div><div class="rmeta"><b>ニュース検索「AI 活用」</b>　8/17</div></div></a><a class="row" href="#/item/9"><img class="rthumb" src="https://www.techno-edge.net/imgs/ogp_f/33613.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">Anthropicの電子透かし導入発表直後に登場した透かし剥がしOSS「watermarks-remover」がClaude・Gemini・OpenAIに対応（生成AIクローズアップ）</div><div class="rmeta"><b>はてなブックマーク（テクノロジー）</b>　8/17</div></div></a><a class="row" href="#/item/10"><img class="rthumb" src="https://newsatcl-pctr.c.yimg.jp/t/iwiz-yn/rpr/kuriharakiyoshi/02695613/title-1786931187898.jpeg?exp=10800" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">生成AIの画像は誰のもの？：著作物性をめぐる先駆的裁判</div><div class="rmeta"><b>ニュース検索「生成AI」</b>　8/17</div></div></a><a class="row" href="#/item/11"><img class="rthumb" src="https://www.zenchin.com/style_images/pc/cat74_noimg.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">国が不動産業界向けにAI実証事業</div><div class="rmeta"><b>ニュース検索「不動産 AI」</b>　8/17</div></div></a><a class="row" href="#/item/12"><img class="rthumb" src="https://techcrunch.com/wp-content/uploads/2026/02/GettyImages-2261514463.jpg?w=1024" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">アンソロピックCEO、AI規制反発は「信頼の危機」が根本原因と主張</div><div class="rmeta"><b>TechCrunch</b>　8/17</div></div></a><a class="row" href="#/item/13"><img class="rthumb" src="https://techcrunch.com/wp-content/uploads/2026/02/GettyImages-2184416821.jpg?w=1024" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">スライブ・キャピタルのクシュナー氏、シリコンバレーのAI熱狂に苦言</div><div class="rmeta"><b>TechCrunch</b>　8/15</div></div></a><a class="row" href="#/item/14"><img class="rthumb" src="https://images.ctfassets.net/kftzwdyauwt9/7foBqhVyCeruJXiT79LxmK/94e25ece2f872aded25419f38d248653/Dali_Resized.png?w=1600&amp;h=900&amp;fit=fill" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">OpenAI、最高収益責任者にダリ・ラジック氏を任命</div><div class="rmeta"><b>OpenAI</b>　8/13</div></div></a></div></section>
+<section class="re" id="re"><h2>不動産<span class="count">新着9件</span></h2><div class="rows"><a class="row" href="#/item/15"><img class="rthumb" src="https://www.re-port.net/picture_l/report/0000082627_01.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">ボストンでオフィスを賃貸住宅に転換／サンケイビル</div><div class="rmeta"><b>R.E.port</b>　8/17</div></div></a><a class="row" href="#/item/16"><img class="rthumb" src="https://www.mlit.go.jp/common/001391890.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">建設総合統計（令和8年6月分）</div><div class="rmeta"><b>国土交通省 報道発表</b>　8/17</div></div></a><a class="row" href="#/item/17"><img class="rthumb" src="https://www.re-port.net/ogpimage.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">首都圏分譲マンション賃料、直近1年間の最高値更新</div><div class="rmeta"><b>R.E.port</b>　8/17</div></div></a><a class="row" href="#/item/18"><img class="rthumb" src="https://www.re-port.net/picture_l/report/0000082629_02.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">つくる地所、新富町にブティックホテル開業</div><div class="rmeta"><b>R.E.port</b>　8/17</div></div></a><a class="row" href="#/item/19"><img class="rthumb" src="https://www.re-port.net/ogpimage.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">中東情勢、7割弱が「事業に影響」／長谷工LN</div><div class="rmeta"><b>R.E.port</b>　8/17</div></div></a><a class="row" href="#/item/20"><div class="rph"></div><div class="rtext"><div class="rtitle">【数社限定】「Japanese Garden TV(登録者19万人)」とともに庭園プロデュース事業の提供を開始</div><div class="rmeta"><b>いえらぶニュース</b>　8/14</div></div></a><a class="row" href="#/item/21"><div class="rph"></div><div class="rtext"><div class="rtitle">【開催報告】社員主役の「AI事例共有会」を本格導入、現場発の自動化を“全社の共有知”へ--”AIを活用できる社内人材がいない、育てていない”の声に応えるLIFEFUNDの実践</div><div class="rmeta"><b>いえらぶニュース</b>　8/14</div></div></a><a class="row" href="#/item/22"><div class="rph"></div><div class="rtext"><div class="rtitle">2026年8月 CAPSレポート（マンション価格 &amp; 賃料）</div><div class="rmeta"><b>いえらぶニュース</b>　8/14</div></div></a><a class="row" href="#/item/23"><div class="rph"></div><div class="rtext"><div class="rtitle">【浅香山駅徒歩13分】トランクルーム「スペラボ堺東店」が2026年9月1日にオープン！</div><div class="rmeta"><b>いえらぶニュース</b>　</div></div></a></div><details class="seen"><summary>前回までに読んだ記事 6件</summary><div class="rows"><a class="row" href="#/item/24"><img class="rthumb" src="https://cdn.jutaku-s.com/0cea2a77d3f4c293e4dcfca120ef39c8-640x452.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">埼玉・鶴ヶ島市で第1号の空き家跡地を地域公園に タミヤホーム</div><div class="rmeta"><b>住宅新報web</b>　8/17</div></div></a><a class="row" href="#/item/25"><div class="rph"></div><div class="rtext"><div class="rtitle">手軽なネットか地元のプロか！約半数が悩む「傾斜地の家」探し事情</div><div class="rmeta"><b>いえらぶニュース</b>　8/15</div></div></a><a class="row" href="#/item/26"><img class="rthumb" src="https://suumo.jp/journal/wp/wp-content/uploads/2026/08/218964_main.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">「空き家と起業者のマッチング50件超」「ひとり親世帯は家賃3割引き」など”負動産”を最強の地域資源に変える「地域価値を共創する不動産業アワード」受賞7組の常識破りな挑戦</div><div class="rmeta"><b>SUUMOジャーナル</b>　8/14</div></div></a><a class="row" href="#/item/27"><img class="rthumb" src="https://www.re-port.net/ogpimage.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">建設業従事者、依頼断る理由の8割が「労務費」</div><div class="rmeta"><b>R.E.port</b>　8/14</div></div></a><a class="row" href="#/item/28"><img class="rthumb" src="https://suumo.jp/journal/wp/wp-content/uploads/2026/08/218826_main.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">【フラット35】の最新利用調査では、中古住宅での利用割合が増加！新築と中古の年収倍率に大きな開きも</div><div class="rmeta"><b>SUUMOジャーナル</b>　8/12</div></div></a><a class="row" href="#/item/29"><img class="rthumb" src="https://www.mlit.go.jp/common/001391890.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;rph&quot;></div>'"><div class="rtext"><div class="rtitle">建設工事受注動態統計調査報告（令和８年６月分）</div><div class="rmeta"><b>国土交通省 報道発表</b>　8/10</div></div></a></div></details></section>
 <footer>見出しをタップすると要約が開きます。<br>
 要約は各記事の本文をもとに自動生成しています。正確な内容は元記事をご確認ください。</footer>
 </div>
 
 <article class="detail ai" id="item-0" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">OpenAI、「preparedness」チームを解体したと報道</h2>
-<img class="dthumb" src="https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK149_AI_01.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.732984293194%2C100%2C78.534031413613&amp;w=1200" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<h2 class="dtitle">WhiskerのAI搭載猫トイレロボット、うちの2匹の猫を混同してしまう</h2>
+<img class="dthumb" src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/268628_Pet_week_CVirginia_LITTER_ROBOT.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.732984293194%2C100%2C78.534031413613&amp;w=1200" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
 <div class="dmeta"><span class="src">The Verge</span><span>2026年8月17日</span></div>
-<div class="dsum"><p>Financial Timesによると、OpenAIは先月末にモデルの深刻なリスクを評価し対策を講じる「preparedness」チームを解体した。</p><p>バイオやサイバーなど分野ごとの責任は分割され、既存のチームに移管されたという。</p><p>これはIPOに向けて揺れ動く同社における安全性チームの再編の一環であり、AGI readinessチームやsuperalignmentチームも過去に解体されている。</p><p>倫理責任者のChloé Bakalar氏、Chief FuturistのJosh Achiam氏、safety責任者のJohannes Heidecke氏も最近相次いで退社した。</p><p>2024年に退職したJan Leike氏など一部の批判者は、同社が安全性を軽視し「見栄えの良い製品」作りを優先していると同紙に語った。</p><p>preparednessチームの責任者で今年2月にAnthropicから移籍したDylan Scandinaro氏は、今後「再帰的自己改善」を行うAIの影響に焦点を移すとされる。</p></div>
-<a class="go" href="https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="dsum"><p>米Whisker社は猫トイレ処理ロボットの最上位モデルとして、価格899ドルの「Litter-Robot 5 Pro」を発売した。</p><p>同モデルはデュアルカメラや複数のセンサー、AIと機械学習を搭載し、猫の排泄物処理に加えて健康状態の監視をうたう。</p><p>筆者は5 Proと廉価版の599ドル「Litter-Robot Evo」を6カ月間試用したが、AI機能は期待通りに機能しなかった。</p><p>排泄物処理ロボットとしての性能は高く、大型のビンやLCD画面による分かりやすい操作性で前モデルの699ドル「Litter-Robot 4」を上回った。</p><p>しかし月8ドルの「Whisker Plus」サブスクリプションが提供するAI健康機能は、試用期間中に一つも役立つ情報を示さなかった。</p><p>新機能「WasteID」は排泄物の種類を正しく識別できず、2台のカメラは体格の異なる2匹の飼い猫をたびたび混同した。</p></div>
+<a class="go" href="https://www.theverge.com/tech/978323/whisker-litter-robot-5-pro-review" target="_blank" rel="noopener">元記事を読む →</a>
 <div class="note">タップすると www.theverge.com が開きます</div>
 </article>
 <article class="detail ai" id="item-1" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">Stripe、AIゲートウェイのOpenRouterを70億ドル超で買収へ</h2>
-<img class="dthumb" src="https://techcrunch.com/wp-content/uploads/2024/04/Stripe-resized.webp?resize=1200,674" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">TechCrunch</span><span>2026年8月17日</span></div>
-<div class="dsum"><p>Bloombergの新たな報道によると、StripeはOpenRouterを買収する取引を最終合意したという。</p><p>OpenRouterは用途や予算に応じて顧客が異なるAIモデルを選択できるようにするサービスを提供している。</p><p>同社は5月に1億1300万ドルのシリーズB調達を発表しており、評価額は13億ドルとされ、Sequoia、Andreessen Horowitz、Menlo Ventures、AlphabetのCapitalGなどが投資家に名を連ねる。</p><p>当時、OpenRouterのCEOアレックス・アタラー氏は自社を「AI版のStripe」と表現し、システムの囲い込みを防ぐ単一の窓口を提供すると説明した。</p><p>同社は世界で800万人のユーザーを持ち、400以上のモデルへのアクセスを提供していると主張していた。</p><p>先月にはWall Street Journalが両社の買収交渉を報じており、Bloombergは今回、買収価格が70億ドル超に達したと伝えた。</p></div>
-<a class="go" href="https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると techcrunch.com が開きます</div>
+<h2 class="dtitle">Anthropic、Claudeの見えないテキスト透かしの仕組みを説明</h2>
+<img class="dthumb" src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/01/STKB364_CLAUDE_2_C_96d15c.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.732984293194%2C100%2C78.534031413613&amp;w=1200" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">The Verge</span><span>2026年8月17日</span></div>
+<div class="dsum"><p>AnthropicはEUのAI法が定める透明性規則に対応するため、Claudeが生成するテキストに目に見えない電子透かしを導入する方針を明らかにした。</p><p>この透かし技術はGoogle DeepMindが開発したオープンソースの「SynthID-Text」を応用したものだという。</p><p>透かしは意味にほとんど影響しない単語選択、例えば「overcast」か「grey」かといった箇所に、鍵に基づくパターンを埋め込む仕組みになっている。</p><p>通常はランダムに選ばれる単語も、透かし機能を使うと鍵と直前の数語に基づいて選ばれるため、読者には気づかれないが鍵を持つ人には検出可能になる。</p><p>Anthropicはこのテキスト透かしとClaudeが処理した画像向けのC2PA対応について、コストの上昇やClaudeの出力品質への影響はないと説明している。</p><p>GoogleのGeminiは2024年からSynthID-Textを採用しており、OpenAIも文章の透かし計画は明らかにしていないもののEU法の対象になるとされている。</p></div>
+<a class="go" href="https://www.theverge.com/ai-artificial-intelligence/980869/anthropic-claude-watermarks-synthid-text-system" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.theverge.com が開きます</div>
 </article>
 <article class="detail ai" id="item-2" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">人々がザッカーバーグの描くAIの未来を信じない理由</h2>
-<img class="dthumb" src="https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2239280474.jpg?resize=1200,800" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">TechCrunch</span><span>2026年8月17日</span></div>
-<div class="dsum"><p>Meta CEOのマーク・ザッカーバーグ氏は今週、6500語のエッセイを公開し「The Future is for Everyone」と題して、誰もが自分の目標や関心事を理解する高性能な個人向けAIエージェントを持てる楽観的な未来像を描いた。</p><p>TechCrunchのPodcast「Equity」では、この構想に懐疑的な見方が多い理由が議論され、同僚のラッセル・ブランドム氏はこの声明を「人々がAIを嫌う理由そのもの」と評したという。</p><p>出演者のレベッカ・ベラン氏は、週末に自身をドゥーマーではないと主張していたAnthropicのCEOダリオ・アモデイ氏と対比し、ザッカーバーグ氏は「反ダリオ」的な立場を取ろうとしているようだと指摘した。</p><p>一方で問題はザッカーバーグ氏とMetaの過去の実績であり、かつてSNSで友人とのつながりを掲げながら、実際にはレイジベイトや広告が支配的になった経緯があると述べた。</p><p>ベラン氏は、Metaがフロンティアモデルやオープンモデル分野で優勢に立てていない中、個人向けAIという領域で勝負しようとしていると分析し、新モデルGlimmerや従来の高性能モデルMuse Sparkにも言及した。</p><p>ベラン氏は結論として、ザッカーバーグ氏の「個人のエンパワーメント」という理念が多くの人に不快感を与えているのは、それを語っているのが他ならぬ彼自身だからだと述べた。</p></div>
-<a class="go" href="https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると techcrunch.com が開きます</div>
+<h2 class="dtitle">人型ロボが“人間超え”――助走なしで高さ2mのジャンプ、時速45kmで走行も 中国Unitreeが開発中の新モデルを公開</h2>
+<img class="dthumb" src="https://www.itmedia.co.jp/aiplus/article/ogp/2608/17/2000000567/10002815/2048" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">ITmedia AI+</span><span>2026年8月17日</span></div>
+<div class="dsum"><p>中国のロボット開発企業Unitree Roboticsは8月17日、開発中の新型ヒューマノイドロボットのデモ動画を公開した。</p><p>動画では助走なしで高さ2メートルのジャンプを披露した。</p><p>最高で秒速12.66メートル、時速換算で45.576キロメートルという走行速度も記録した。</p><p>Unitreeはジャンプと走行の両方で人類の世界最高記録を上回ったとアピールしている。</p><p>新モデルは頭部のない人型をしており、脚の長さは85センチメートルだが、詳しいスペックは明らかにされていない。</p><p>開発を始めてからまだ3カ月ほどしか経過しておらず、今後数カ月でさらに性能を改善できる余地があるとしている。</p></div>
+<a class="go" href="https://www.itmedia.co.jp/aiplus/article/2608/17/2000000567/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.itmedia.co.jp が開きます</div>
 </article>
 <article class="detail ai" id="item-3" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">Claude、Codex、Qwen……そのAI用語、どう読む？ 読み方クイズ30問</h2>
-<img class="dthumb" src="https://image.itmedia.co.jp/ait/articles/2608/17/cover_news020.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<h2 class="dtitle">なぜPFNは「国産AI」をゼロから開発するのか 担当者に聞く“自家製ならではの利点”</h2>
+<img class="dthumb" src="https://www.itmedia.co.jp/aiplus/article/ogp/2608/17/2000000441/10002108/2048" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
 <div class="dmeta"><span class="src">ITmedia AI+</span><span>2026年8月17日</span></div>
-<div class="dsum"><p>AI用語には読み方が意外だったり人によって分かれたりするものが少なくないとして、全30問の読み方クイズを紹介する記事である。</p><p>判定は公式サイトや公式SNS、公式ドキュメント、日本向けアプリストア、日本法人の登記情報などを調べ、明言がない場合は日本語圏で最も多く使われている読みを正解とした。</p><p>記事前半ではClaude（クロード）、Codex（コーデックス）、Cursor（カーソル）、Suno（スーノ）、Manus（マナス）、Dify（ディフィー）、Grok（グロック）、Qwen（クウェン）、Gemini（ジェミニ）、Gemma（ジェマ）という有名10語を出題している。</p><p>例えばManusは日本公式Xやnoteが「マナス」と表記しており、Difyは2025年6月30日にブランド更新に伴って公式な読み方を「ディフィー」に統一したと回答している。</p><p>GeminiについてはGoogle Japanの公式Xが2026年1月20日に「Gemini の日本語表記は『ジェミニ』です」と投稿した一方、2023年の発表動画ではデミス・ハサビス氏自身が「ジェミナイ」と発音していたという。</p><p>後半ではAIモデル名、企業名、ツール名、技術用語、略語の5分野に分けて残り20問が出題され、MythosやKimi、Phiなどの読み方も解説されている。</p></div>
-<a class="go" href="https://atmarkit.itmedia.co.jp/ait/articles/2608/17/news020.html" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると atmarkit.itmedia.co.jp が開きます</div>
+<div class="dsum"><p>Preferred Networks(PFN)は、既存モデルを土台にしない「フルスクラッチ」開発による国産AIモデル「PLaMo」を提供している。</p><p>LLM開発事業本部長の田中大輔氏は、アーキテクチャや学習データを自らの意思で決められる体制こそが国産AIの核心だと語る。</p><p>フルスクラッチ開発により、学習データが著作権を侵害していないかといった説明責任を果たしやすく、不具合発生時にも原因を調査しやすいという利点がある。</p><p>PFN独自のトークナイザーにより、海外モデルに比べて日本語処理で消費するトークン量を約2〜3割抑えられるという。</p><p>一方でフルスクラッチ開発は学習コストが高く開発期間も長くなりやすいため、医療分野などではオープンモデルへの追加学習も併用する方針を示している。</p><p>PFNは7月、AI企業NoetraのAIモデル開発への協力を発表しており、田中氏らが出向してロボット向け「フィジカルAI」モデルを国内の計算基盤で構築し、2027年ごろに「ちゃんと国産」と呼べるものを目指すとしている。</p></div>
+<a class="go" href="https://www.itmedia.co.jp/aiplus/article/2608/17/2000000441/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.itmedia.co.jp が開きます</div>
 </article>
 <article class="detail ai" id="item-4" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">ChatGPTの新機能「Computer History」、クリックやキー入力を記録し学習</h2>
-<img class="dthumb" src="https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK155_OPEN_AI_4_CVirginia_C.png?quality=90&amp;strip=all&amp;crop=0%2C10.742221417566%2C100%2C78.515557164868&amp;w=1200" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">The Verge</span><span>2026年8月16日</span></div>
-<div class="dsum"><p>ChatGPTのmacOS向けデスクトップアプリに、ユーザーの操作を訓練データ化する新機能「Computer History」が追加された。</p><p>ユーザーの作業内容を学習し、自動化を提案したり、途中で止めたタスクを引き継いだりする機能を持つ。</p><p>記録された行動はタイムライン化され、ChatGPTやCodexがユーザーの依頼に応じる際に参照する仕組みになっている。</p><p>この機能はオプトインで提供され、特定のアプリやサイトを除外したり、記録を個別に削除したりすることも可能である。</p><p>OpenAIのAri Weinstein氏はX上で、シークレットモードやプライベートタブの内容は自動的に無視されると説明した。</p><p>Windows Recallに似ているとされるが、OpenAIによればスクリーンショットや動画、音声は取得せず「イベント」情報のみを利用するという。</p></div>
-<a class="go" href="https://www.theverge.com/ai-artificial-intelligence/980742/chatgpts-computer-history-tracks-your-clicks-and-keystrokes" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると www.theverge.com が開きます</div>
+<h2 class="dtitle">AI活用で一人の起業が容易に 職を失うリスクを回避する副業の始め方</h2>
+<img class="dthumb" src="https://images.forbesjapan.com/media/article/101891/images/main_image_7988694e6f5b38ba7b6ba226ad90b1fbfc6f6b78.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">ニュース検索「AI 活用」</span><span>2026年8月17日</span></div>
+<div class="dsum"><p>雇用の安定性が揺らぐ中、起業に踏み切るプロフェッショナルが増えている。</p><p>米国勢調査局によると、2026年6月に提出された事業申請は53万1000件を超えた。</p><p>コンサルティングやフリーランス、コーチングなど、経験を生かした副業で収入源を複数確保する動きが広がっている。</p><p>米イェール大学予算研究所の調査では、失業期間の平均が2023年初めの20週未満から2026年初めには約26週に伸びた。</p><p>失業した翌月に新しい仕事を見つけた人の割合も24%と、2022年の30%から低下している。</p><p>こうした雇用市場の減速を背景に、単一の雇用主に依存するリスクの見積もり方が変わりつつある。</p></div>
+<a class="go" href="https://forbesjapan.com/articles/detail/101891" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると forbesjapan.com が開きます</div>
 </article>
 <article class="detail ai" id="item-5" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">AIバブル第2波がこれからやってくる！「絶好の買い場」と銘柄を予測</h2>
-<img class="dthumb" src="https://res.cloudinary.com/gb-cache/image/upload/prod/h0py9vbf0q585h2dsmam6iat" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">ニュース検索「生成AI」</span><span>2026年8月16日</span><span class="also">ニュース検索「AI 活用」でも報道</span></div>
-<div class="dsum"><p>米中のAI開発競争を背景に、日本の半導体関連銘柄に投資妙味があるとする見方が示されている。</p><p>AIの普及に伴い「SaaSの死」がしばしば語られてきたが、これは過剰反応だったとの指摘がある。</p><p>マーケットバンク代表の岡山憲史氏は、生成AI導入には自社データとの安全な接続や既存システムへの組み込みが不可欠だと説明する。</p><p>その上で、基幹システム統合を担うNTTや業務改革を支援する野村総合研究所、富士通などがAI活用支援で収益化していくと予測している。</p><p>SaaS再評価の文脈で最も名前が挙がった銘柄はPKSHA Technologyであるという。</p><p>グローバルリンクアドバイザーズ代表の戸松信博氏は、PKSHAが企業ごとの事情に合わせて自前技術でAIを組み上げるため簡単には代替されず、利益を出しながら利用企業数を伸ばしている点が安心材料だと述べている。</p></div>
-<a class="go" href="https://gendai.media/articles/-/169720" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると gendai.media が開きます</div>
+<h2 class="dtitle">OpenAI、「インテリジェンス時代」に向けた新政策アイデアに助成金</h2>
+<img class="dthumb" src="https://images.ctfassets.net/kftzwdyauwt9/3ui6fuXDbnmCfn6AqK9xkn/b8f4d1d81779680070c147b1ae685c9f/new-policy-ideas-for-the-intelligence-age--seo-v001.png?w=1600&amp;h=900&amp;fit=fill" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">OpenAI</span><span>2026年8月17日</span></div>
+<div class="dsum"><p>OpenAIは、独立組織が主導する14件のプロジェクトに助成金を授与すると発表した。</p><p>これは2026年4月に公表した政策文書「インテリジェンス時代の産業政策」での公約を実行するものだ。</p><p>ChatGPTは世界で10億人に利用されており、地域や所得、年齢を問わず幅広い層に浸透している。</p><p>AIの恩恵を広く行き渡らせるには、社会がどう活用し利益を分配するかという政策的選択が重要になるとしている。</p><p>提案には400を超える個人や団体が応募し、米国やEU、ブラジル、シンガポール、韓国にまたがるプロジェクトが選ばれた。</p><p>OpenAIは総額100万ドルの資金と、最大100万ドル相当のAPIクレジットを提供する。</p></div>
+<a class="go" href="https://openai.com/index/new-policy-ideas-for-the-intelligence-age" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると openai.com が開きます</div>
 </article>
 <article class="detail ai" id="item-6" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">AI生成テキストの「透かし」が埋め込まれる仕組み</h2>
-<img class="dthumb" src="https://i.gzn.jp/img/2026/08/16/ai-text-watermarking/00.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">はてなブックマーク（テクノロジー）</span><span>2026年8月16日</span></div>
-<div class="dsum"><p>AIが生成した文章に目印を埋め込み判別可能にする「ウォーターマーク」が注目を集めており、OpenAIが試験導入し、Anthropicも導入を発表している。</p><p>テキストには画像のようにデータを隠すピクセルがなく、メタデータもコピー＆ペーストで消えるため、その仕組みが解説されている。</p><p>大規模言語モデルは次に来る単語の候補すべてに確率を割り当てており、通常はランクの高い単語だけでなく低い単語もあえて選ばれることがある。</p><p>ウォーターマークは候補単語を秘密鍵で2つのグループに分け、一方のグループが選ばれる確率をわずかに高くすることで実現される。</p><p>検出器は生成時と同じ秘密鍵で文章を再計算し、統計的な偏りがあるかどうかを調べることでAIの関与を判定する仕組みである。</p><p>文章が長いほど検出しやすく、逆にコードや引用文のように単語選択の幅が狭い文章では埋め込む余地が小さくなるとされ、ウォーターマークの検出は「AIが処理した」ことを示すに過ぎず「AIが書いた」ことの証明ではないと説明されている。</p></div>
-<a class="go" href="https://gigazine.net/news/20260816-ai-text-watermarking/" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると gigazine.net が開きます</div>
+<h2 class="dtitle">駐禁除外の標章、生成AIで偽造か 「見た目で分からないほど精巧」</h2>
+<img class="dthumb" src="https://imgopt.asahi.com/ogp/AS20260817002892_comm.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">ニュース検索「生成AI」</span><span>2026年8月17日</span></div>
+<div class="dsum"><p>大阪府警大淀署は、生成AIで駐車禁止除外指定車標章の偽物を作り使用したとして、高石市の53歳男性会社員を有印公文書偽造・同行使の疑いで書類送検した。</p><p>文字の形や位置などの特徴が正確に再現されており、捜査幹部は「見た目では分からないほど精巧だった」としている。</p><p>生成AIを使った同標章の偽造容疑での検挙は大阪府内で初めてで、府警は起訴を求める厳重処分の意見を付けた。</p><p>男性は「こづかいを無駄にしたくなかった。駐車料金を浮かしたかった」と容疑を認めているという。</p><p>男性は4〜5月にパソコンで生成AIを使い偽の標章を作成し、6月に大阪市北区の路上で駐車中の車のダッシュボードに掲示した疑いがある。</p><p>近隣住民の苦情で駆けつけた警察官が標章を発見し、記載された登録者に確認したところ本人でないと判明し、偽造が発覚した。</p></div>
+<a class="go" href="https://www.asahi.com/articles/ASV8K33GGV8KPTIL00HM.html" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.asahi.com が開きます</div>
 </article>
 <article class="detail ai" id="item-7" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">「Claude」の“見えない透かし”、Anthropicが仕組みを説明 「完全な書き直しなら消える」</h2>
-<img class="dthumb" src="https://www.itmedia.co.jp/news/article/ogp/2608/16/2000000555/10002741/2048" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">ITmedia AI+</span><span>2026年8月16日</span><span class="also">はてなブックマーク（テクノロジー）でも報道</span></div>
-<div class="dsum"><p>米Anthropicは8月14日、Claudeが生成するテキストに埋め込む電子透かしの仕組みを説明した。</p><p>Google DeepMindの「SynthID-Text」を基に、単語選択時の乱数生成源を秘密鍵と直前の文脈に置き換えることで統計的パターンを残す方式であり、テキストに文字を追加しないため品質や速度、料金には影響しないとしている。</p><p>この対応はEU AI Actの透明性義務に関する行動規範への署名に伴うもので、適用範囲はEU域内にとどまらず日本を含む全世界のモデルとプロダクトに及ぶ。</p><p>数式やコード、事実を一意に定める記述のように単語選択の自由度が低い文章では透かしを埋め込む余地が少なく、コードでは動作に影響しない部分にのみ適用するという。</p><p>検出は同社が近く提供予定の専用APIと秘密鍵を用いて行われ、Claudeが関与した確率を測るものであり、軽い編集では消えにくいが全ての単語を置き換える完全な書き直しをすれば透かしは消えるとしている。</p><p>なお画像ファイルについては、C2PA準拠のメタデータに暗号署名付きの記録を付与する別方式を採用し、EU AI Actの適用開始前にリリースされた既存モデルへの対応は経過措置のもと今後数カ月かけて展開するとしている。</p></div>
-<a class="go" href="https://www.itmedia.co.jp/news/article/2608/16/2000000555/" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると www.itmedia.co.jp が開きます</div>
+<h2 class="dtitle">差別や偏見が生まれる「構造」を問うてはいけない？全国中学生人権作文コンテストの受賞作品をAIに分析させたら「内閣総理大臣賞を獲る13ヶ条」ができた話</h2>
+<img class="dthumb" src="https://s.tgstc.com/ogp3/41ba413506fcd415596c2c5dbb7d22e2-1200x630.jpeg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">はてなブックマーク（テクノロジー）</span><span>2026年8月17日</span></div>
+<div class="dsum"><p>全国中学生人権作文コンテストの受賞作品12編をAIに分析させたところ、内閣総理大臣賞を獲得するための「必勝13ヶ条」が浮かび上がったという投稿が話題になった。</p><p>分析によれば、身近な人物のエピソードから書き始め、「人権」という言葉は終盤まで使わず、「権利」も最終的に「思いやり」に変換するのが定番のパターンだという。</p><p>法律や政策、加害者や差別を生む構造を名指しで批判することは避け、「無意識の偏見」など誰のせいでもない形にとどめる傾向が指摘された。</p><p>気づきは個人の内面で完結させ、デモや署名活動などの具体的な行動には触れず、「〜でありたい」という願望形で締めくくる型が12作品全てに共通していたとされる。</p><p>投稿者は「構造を問うてはいけない、心だけを問え」という原則が全体を貫いていると分析し、これが現在の人権教育の実態だと述べた。</p><p>この投稿はX上で拡散され、「行政に問題はないと書けばいい」「皮肉だ」「中学生にこれを強いている」など多くの反応を呼んだ。</p></div>
+<a class="go" href="https://togetter.com/li/2734001" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると togetter.com が開きます</div>
 </article>
 <article class="detail ai" id="item-8" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">ホンダ、衝突安全技術の開発にAI活用 中国勢対抗へ期間4割短縮</h2>
-<img class="dthumb" src="https://article-image-ix.nikkei.com/https%3A%2F%2Fimgix-proxy.n8s.jp%2FDSXZQO3150829010062026000000-1.jpg?auto=compress&amp;bg=FFFF&amp;crop=focalpoint&amp;fit=crop&amp;fm=jpg&amp;h=630&amp;w=1200&amp;s=a43f118fda1a760ea83b33b02ccbf2d2" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">ニュース検索「AI 活用」</span><span>2026年8月16日</span></div>
-<div class="dsum"><p>ホンダは自動車の安全技術開発に人工知能(AI)を活用する方針を示した。</p><p>衝突安全対策において、AIが車両のデザインや設計の修正点を瞬時に複数提示できるようにする。</p><p>これにより開発期間を4割以上短縮することを目指す。</p><p>新型車開発の速さで先行する中国勢への対抗が狙いである。</p><p>AIが学習・推論しやすいよう衝突安全データの蓄積や運用方法を見直した。</p><p>自律的に業務をこなすAIエージェントを実用化し、既存の大規模言語モデル(LLM)を自社向けに独自設計した。</p></div>
-<a class="go" href="https://www.nikkei.com/article/DGXZQOUC10CKM0Q6A610C2000000/" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると www.nikkei.com が開きます</div>
+<h2 class="dtitle">ATLANT 3D、「NANOFABRICATOR® PRO」を発売：AIを活用した材料探索向けの世界初かつ唯一の物理プラットフォーム：時事ドットコム</h2>
+<img class="dthumb" src="https://mmx.prnasia.com/media/MS1828169/ATLANT-3D.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">ニュース検索「AI 活用」</span><span>2026年8月17日</span></div>
+<div class="dsum"><p>ATLANT 3Dは、AIを活用した材料探索向けの世界初かつ唯一の物理プラットフォーム「NANOFABRICATOR PRO」の発売を発表した。</p><p>独自のDirect Atomic Layer Processing(DALP)技術を採用し、材料探索、原子スケール製造、実験検証、試作を統合する。</p><p>半導体、先進パッケージング、量子技術など幅広い分野への応用を想定したプラットフォームである。</p><p>Automated Industrial Robotics(AIR)との協業で産業用途向けに実用化され、SEMI規格に準拠し米国で製造される。</p><p>ATLANT 3DのCEO兼創業者Maksym Plakhotnyuk氏は、AIによる発見を現実世界のイノベーションに転換する基盤になると述べた。</p><p>AIR Silicon Valley社長のBob Fung氏も、高度なエンジニアリングと米国の製造能力を組み合わせる意義を語った。</p></div>
+<a class="go" href="https://www.jiji.com/jc/article?k=1rjZzIYO&amp;g=prn" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.jiji.com が開きます</div>
 </article>
 <article class="detail ai" id="item-9" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">米不動産王が明かす、AIエージェントで「100万ドル級の売上」を実現した方法</h2>
-<img class="dthumb" src="https://images.forbesjapan.com/media/article/102485/images/main_image_f395b30380b18efdfe9483780b4ebda7b7958654.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">ニュース検索「不動産 AI」</span><span>2026年8月14日</span></div>
-<div class="dsum"><p>米国のリアリティ番組で知られる不動産界の大物ライアン・サーハント氏が、SXSWロンドンでAI活用による収益化について語った。</p><p>同氏は数十億ドル規模の不動産会社SERHANT.のCEOで、約1000人のチームを率いている。</p><p>独自開発したAIツール「S.MPLE」は、従業員のように役割を割り当てられたAIエージェントの集合体である。</p><p>不動産エージェントが抱えがちな過剰な事務・管理業務を減らす狙いがある。</p><p>サーハント氏によると、営業担当者は1日の約80%をデータ入力や進捗管理などの事務作業に奪われ、顧客対応など人にしかできない業務には20%しか使えていない。</p><p>この経験から同氏は「収益を支える仕事」と「収益を直接生み出す仕事」を区別する発想を得た。</p></div>
-<a class="go" href="https://forbesjapan.com/articles/detail/102485" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると forbesjapan.com が開きます</div>
+<h2 class="dtitle">Anthropicの電子透かし導入発表直後に登場した透かし剥がしOSS「watermarks-remover」がClaude・Gemini・OpenAIに対応（生成AIクローズアップ）</h2>
+<img class="dthumb" src="https://www.techno-edge.net/imgs/ogp_f/33613.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">はてなブックマーク（テクノロジー）</span><span>2026年8月17日</span></div>
+<div class="dsum"><p>連載「生成AIウィークリー」の企画「生成AIクローズアップ」で、AI生成テキストの電子透かしやメタデータを除去するOSSツール「watermarks-remover」を取り上げた。</p><p>Anthropicは、EU AI法第50条への対応として、8月2日以降にリリースしたClaudeのモデルが生成するテキストに知覚できない電子透かしを埋め込むと発表していた。</p><p>この発表直後、GitHub上にMITライセンスで「watermarks-remover」が公開され、Claude、Gemini(SynthID-Text)、OpenAI、オープンLLM全般に対応するとしている。</p><p>透かし除去には、特殊な空白文字やUnicodeタグの除去、AIモデルによる文章の書き換え、ファイルからのメタデータ除去という3つの手法が用意されている。</p><p>文章の書き換えでは生成元とは別のモデルの利用が推奨される一方、書き直しによる文章の劣化リスクも指摘されている。</p><p>オプションの外部ツールと組み合わせれば画像のピクセル透かしの検出・除去も可能だが、本ツールは自分が権限を持つコンテンツ向けとされ、ベンダーの検出器から逃れられる保証もないとしている。</p></div>
+<a class="go" href="https://www.techno-edge.net/article/2026/08/17/5398.html" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.techno-edge.net が開きます</div>
 </article>
 <article class="detail ai" id="item-10" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">「Gemini 3.7 Flash」を発表</h2>
-<img class="dthumb" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-7-flash.width-1300.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">Google DeepMind</span><span>2026年8月14日</span></div>
-<div class="dsum"><p>グーグル・ディープマインドは、コーディングとエージェント向けとして同社史上最も高性能な主力モデル「Gemini 3.7 Flash」を発表した。</p><p>前モデルのGemini 3.6 Flashからわずか3週間後の投入となる。</p><p>デバッグや課題解決などのコーディング作業で3.6 Flashを大きく上回り、FrontierCode 1.1 Mainでは43.6%(3.6 Flashは34.4%)、DeepSWE v1.1では65.3%(同49.0%)を記録した。</p><p>ウェブ開発でもWebDev Arenaのイロレーティングで1588(同1538)を獲得し、複雑な文書処理を測るGDP.pdfベンチマークでも34.0%(同22.0%)と性能が向上した。</p><p>価格は年末まで入力100万トークンあたり0.75ドル、出力100万トークンあたり3.75ドルで、3.6 Flashの半額に設定される。</p><p>160カ国以上でGoogle AI Pro・Ultra加入者向けに提供される自律型AIエージェント「Gemini Spark」にも本日から導入され、CBRNやサイバー攻撃への悪用対策も強化されている。</p></div>
-<a class="go" href="https://deepmind.google/blog/introducing-gemini-3-7-flash/" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると deepmind.google が開きます</div>
+<h2 class="dtitle">生成AIの画像は誰のもの？：著作物性をめぐる先駆的裁判</h2>
+<img class="dthumb" src="https://newsatcl-pctr.c.yimg.jp/t/iwiz-yn/rpr/kuriharakiyoshi/02695613/title-1786931187898.jpeg?exp=10800" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">ニュース検索「生成AI」</span><span>2026年8月17日</span></div>
+<div class="dsum"><p>生成AIで作製した人物モデルの画像を第三者が無断使用したとして、画像を販売する会社が著作権侵害を訴え、裁判で争うことになった。</p><p>生成AI関連の著作権論点には、学習・生成が他人の著作権を侵害するかという論点と、生成物自体が著作物かという論点があり、今回は後者に関する事例である。</p><p>AI生成物の著作物性が民事訴訟の場で判断されるのは今回が初めてとみられている。</p><p>文化庁の「AIと著作権に関する考え方」では、簡単な指示でAIがほぼ自律的に生成したものは原則著作物でなく、創作意図と創作的寄与が認められれば著作物になり得るとされる。</p><p>過去に千葉県警が書類送検した事件では、制作者が指示の修正を2万回以上繰り返しており、それが著作物認定に貢献したとみられる。</p><p>仮に著作物と認められなくても、他人の営業上の利益を侵害する無断使用は不法行為として損害賠償が認められ得るとされ、今回もその可能性があるとみられる。</p></div>
+<a class="go" href="https://news.yahoo.co.jp/expert/articles/e912b15b1c6e0d681b62f6c0b96b66fcbcd195ff" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると news.yahoo.co.jp が開きます</div>
 </article>
 <article class="detail ai" id="item-11" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">「GPT-5.6」開発者向けガイド</h2>
-<img class="dthumb" src="https://images.ctfassets.net/kftzwdyauwt9/4BXdV1bAQE16SMC7CjzCyn/a4bb2a0a0433b2b449b6cf9bce7b7fda/the-builders-guide-to-gpt-5-6-option-075-open-graph.png?w=1600&amp;h=900&amp;fit=fill" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">OpenAI</span><span>2026年8月13日</span></div>
-<div class="dsum"><p>OpenAIは「GPT-5.6」モデルファミリーについて、フロンティア級のエージェント性能を大幅に低コスト化しつつ、性能自体も向上させたと発表した。</p><p>スタートアップ各社が、賢いモデル選択や推論の継続性・マルチエージェント編成・プログラム的なツール呼び出しといった新しいAPI機能を活用し、より速く高性能で低コストなエージェントを構築している事例を紹介している。</p><p>ベンチマーク「Agents&#x27; Last Exam」では、ハーネスを一定にした条件下で、推論強度「低」のGPT-5.6 Solが推論強度「高」のGPT-5.5を上回った。</p><p>検索ベンチマーク「BrowseComp」では、GPT-5.5(Extra High)が84.36%のスコアをコスト33.27ドルで達成したのに対し、GPT-5.6 Luna(Extra High)はほぼ同等の84.04%をわずか1.33ドルで達成した。</p><p>Responses APIには、推論内容をターンをまたいで保持し会話を圧縮する機能、複数エージェントを並列調整するマルチエージェント編成機能、モデルの文脈窓の外でツール出力を処理するプログラム的なツール呼び出し機能が新たに追加された。</p><p>これらを組み合わせた結果、ARC-AGI-3ベンチマークでGPT-5.6 Solのスコアは標準ハーネスでの13.3%から、推論保持と圧縮機能を有効にすると出力トークン数を約6分の1に抑えながら38.3%まで上昇した。</p></div>
-<a class="go" href="https://openai.com/index/builders-guide-to-gpt-5-6" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると openai.com が開きます</div>
+<h2 class="dtitle">国が不動産業界向けにAI実証事業</h2>
+<img class="dthumb" src="https://www.zenchin.com/style_images/pc/cat74_noimg.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">ニュース検索「不動産 AI」</span><span>2026年8月17日</span></div>
+<div class="dsum"><p>国土交通省は、不動産会社の業務効率化に向けたAI活用実証事業を本格始動させ、不動産業界でのAI活用検証は同省として初の試みとなる。</p><p>深刻化する業界の人手不足という課題の解消に向け、契約関連業務へのAI導入の効果測定を進める。</p><p>実証事業では、不動産仲介業務のうち負担の大きい売買・賃貸の契約書、重要事項説明書(重説)、媒介契約書の作成を対象とした。</p><p>国交省不動産・建設経済局不動産業課の上杉良羽課長補佐は、規制改革実施計画で2028年度までにAI技術を含むデジタルサービスの活用方法を示すことが求められていると説明した。</p><p>7月21日に閣議決定された規制改革実施計画には、書類作成や読み上げ、説明内容の要約・補足などAIを活用した重説の場面が盛り込まれている。</p><p>検討・整理の結果を反映したマニュアルなどを2028年度をめどに整備・公表する予定である。</p></div>
+<a class="go" href="https://www.zenchin.com/news/content-5934.php" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.zenchin.com が開きます</div>
 </article>
 <article class="detail ai" id="item-12" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">Ultrafastモードを先行公開、GPT-5.6 Solが最大14倍高速に</h2>
-<img class="dthumb" src="https://images.ctfassets.net/kftzwdyauwt9/3Hr2P0ohSh8XIvwvdWTiqw/bc17823dc335767da94bbef2e1a90fa2/previewing-ultrafast-mode--seo-v001.png?w=1600&amp;h=900&amp;fit=fill" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">OpenAI</span><span>2026年8月13日</span></div>
-<div class="dsum"><p>OpenAIは、GPT-5.6 Solを最大14倍高速に実行する新サービス階層「Ultrafast」を先行公開した。</p><p>Cerebrasの技術を活用し、OpenAI APIで最初に提供され、最大で毎秒750トークンを出力できる。</p><p>従来、リアルタイムの速度を得るには小型モデルや特化モデルを選ぶ必要があったが、Ultrafastは知性を保ったまま高速化を実現する。</p><p>障害対応や金融調査、カスタマーサポート、コマース、研究など、速度が重要な業務での活用が想定されている。</p><p>現在は初期顧客グループとともにプレビューを実施し、社内でも障害対応や研究業務で試験運用を進めている。</p><p>夜間バッチで行っていた実験ループが日中に複数回繰り返せるようになるなど、成果が確認されつつある。</p></div>
-<a class="go" href="https://openai.com/index/previewing-ultrafast" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると openai.com が開きます</div>
+<h2 class="dtitle">アンソロピックCEO、AI規制反発は「信頼の危機」が根本原因と主張</h2>
+<img class="dthumb" src="https://techcrunch.com/wp-content/uploads/2026/02/GettyImages-2261514463.jpg?w=1024" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">TechCrunch</span><span>2026年8月17日</span></div>
+<div class="dsum"><p>アンソロピックのダリオ・アモデイCEOが、自身のAIリスク警告が業界への反発を招いているとの批判に反論した。</p><p>投資家ギャビン・ベイカー氏は、アモデイ氏のAIの危険性に関する発言がデータセンターなどへの反発を煽ったと批判していた。</p><p>これに対しアモデイ氏は、自身の発信はリスクと利点をほぼ均等に扱ってきたと述べ、著書「Machines of Loving Grace」もAIの恩恵を伝えるために書いたと説明した。</p><p>アモデイ氏は世論のAIへの否定的な見方を認めつつ、その根本原因は人々が企業や政府、テック業界を信頼していない「信頼の危機」にあると主張した。</p><p>さらに、AI企業が世界に利益をもたらすという大きな約束をまだ果たせていないことこそ最も正当な批判だと述べた。</p><p>規制論についても、規制なき技術普及か少数企業への集中かという二択は誤りだとし、大手AI企業に不利で小規模な競合に有利な政策提言を心がけていると語った。</p></div>
+<a class="go" href="https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると techcrunch.com が開きます</div>
 </article>
 <article class="detail ai" id="item-13" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">Claudeのテキスト電子透かしの仕組み</h2>
-<img class="dthumb" src="https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Quill&amp;backgroundColor=heather" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">Anthropic</span><span>2026年8月13日</span></div>
-<div class="dsum"><p>Anthropicは、将来のClaudeモデルが生成する文章に電子透かしを組み込むと発表した。</p><p>これはEU AI法への準拠を目的とし、他の主要AI企業も同様の対応を進めている。</p><p>電子透かしは出力の品質や内容に実質的な影響を与えず、読者には透かしの有無を区別できない。</p><p>文章に文字が追加されたり隠し文字が挿入されたりすることはなく、追加トークンによるコスト増もない。</p><p>透かしは特定の個人や組織、会話を特定できる識別情報を含まない。</p><p>次に選ぶ単語の候補が同程度に自然な場合の選択に鍵を使ったパターンを組み込み、後から検証できる仕組みになっている。</p></div>
-<a class="go" href="https://www.anthropic.com/news/claude-text-watermark" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると www.anthropic.com が開きます</div>
+<h2 class="dtitle">スライブ・キャピタルのクシュナー氏、シリコンバレーのAI熱狂に苦言</h2>
+<img class="dthumb" src="https://techcrunch.com/wp-content/uploads/2026/02/GettyImages-2184416821.jpg?w=1024" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">TechCrunch</span><span>2026年8月15日</span></div>
+<div class="dsum"><p>ニューヨーク拠点のベンチャーキャピタル、スライブ・キャピタルの創業者ジョシュア・クシュナー氏が、初の投資家向け書簡でシリコンバレーのVC業界を批判した。</p><p>書簡でクシュナー氏は、AIへの熱狂が投資規律を弱めることは重大な誤りであり、業界が技術の行き着く先ではなく細かな技術的進展に固執しがちだと指摘した。</p><p>スライブは各ファンドの資金の約9割を上位15社の投資先に集中させており、多数に薄く賭ける「スプレー・アンド・プレイ」型とは一線を画すという。</p><p>同社はOpenAIへの出資を深める一方、2025年12月にはOpenAIがスライブのスピンオフ企業スライブ・ホールディングスに出資する形で関係が逆転した。</p><p>スライブ・ホールディングスはこれまでに70社以上を買収し、35人のエンジニアを擁するチームを持つ。</p><p>2022年組成の5億1600万ドル規模のアーリーステージファンドはOpenAIやアンドゥリル、スペースXに早期投資し、2025年6月末時点で37億ドル超の価値になっているとブルームバーグは報じている。</p></div>
+<a class="go" href="https://techcrunch.com/2026/08/14/thrives-joshua-kushner-chides-silicon-valley-vcs-over-ai-euphoria/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると techcrunch.com が開きます</div>
 </article>
 <article class="detail ai" id="item-14" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">手話AIをユーザーの手に</h2>
-<img class="dthumb" src="https://lh3.googleusercontent.com/8RcynTx1ujudyw8Fs05Pv8WJahe2FQ3z1Y7gNHm-xvOTJLdMp9hNDsIIoQbJsnav6evNLgY1iT9B9ercsyIn0U1N51pzScvSfe6IHk2SjDJx-MaVzQ=w1200-h630-n-nu-rw" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">Google DeepMind</span><span>2026年8月12日</span></div>
-<div class="dsum"><p>Google DeepMindは、手話認識AI「SL2T」をろう者コミュニティと共に開発してきたと説明した。</p><p>構想段階から、ろう者のGoogle社員サム・セパ氏らが関わり、データ収集や評価、影響評価にもろうコミュニティが参加した。</p><p>責任あるデータ運用と現場展開を導くため「AI Sign Language Advisory Committee(AISLAC)」を設立し、世界各地のろう者団体や専門家と連携している。</p><p>GboardとLive TranscribeへのSL2T 1.0導入にあたり、技術の能力と現状の限界を透明に示す共同影響報告書を発表した。</p><p>SL2Tは学術界と産業界の研究を土台にしており、今後は他の手話への対応拡大や手話生成機能の開発を目指すとしている。</p><p>SL2TはまずPixel 11のGboardとLive Transcribeで無料で利用でき、対応端末は今後拡大する予定である。</p></div>
-<a class="go" href="https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると deepmind.google が開きます</div>
+<h2 class="dtitle">OpenAI、最高収益責任者にダリ・ラジック氏を任命</h2>
+<img class="dthumb" src="https://images.ctfassets.net/kftzwdyauwt9/7foBqhVyCeruJXiT79LxmK/94e25ece2f872aded25419f38d248653/Dali_Resized.png?w=1600&amp;h=900&amp;fit=fill" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">OpenAI</span><span>2026年8月13日</span></div>
+<div class="dsum"><p>OpenAIは、ダリ・ラジック氏を最高収益責任者(CRO)として迎え入れ、グローバルの収益部門を統括させると発表した。</p><p>OpenAIの製品は現在、週間アクティブユーザーが10億人を超え、利用企業数も200万社超と1年前の2倍に達しているという。</p><p>これまで収益部門を率いてきたデニース・ドレッサー氏は、移行期間を経てOpenAIを離れ、他の機会を追求する予定である。</p><p>ラジック氏は直近、Googleに買収されたサイバーセキュリティ企業ワイズ(Wiz)の社長兼最高執行責任者を務めていた。</p><p>それ以前にはズィースケーラー(Zscaler)の社長兼最高執行責任者、アップダイナミクス(AppDynamics)の最高顧客・収益責任者を歴任している。</p><p>OpenAIはこの取り組みを加速するため、チャド・ピーツ氏およびRPTパートナーズとの戦略的提携も新たに結んだと発表した。</p></div>
+<a class="go" href="https://openai.com/index/dali-rajic-chief-revenue-officer" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると openai.com が開きます</div>
 </article>
 <article class="detail re" id="item-15" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">ボストンでオフィスを賃貸住宅に転換／サンケイビル</h2>
+<img class="dthumb" src="https://www.re-port.net/picture_l/report/0000082627_01.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">R.E.port</span><span>2026年8月17日</span></div>
+<div class="dsum"><p>サンケイビルは17日、米マサチューセッツ州ボストン中心部のオフィスビル「294 Washington Street」(歴史的通称オールド・サウス・ビルディング)の持分を取得したと発表した。</p><p>総戸数約255戸の賃貸レジデンスへコンバージョンする事業に参画するもので、持分取得は6月に完了し、現地デベロッパーのシナジー社と共同で事業を進める。</p><p>同物件はダウンタウン・クロッシング/フィナンシャル地区に立地し、テラコッタ装飾を備えた1903年竣工、地上11階地下2階建てのオフィスビルである。</p><p>コンバージョン後はスタジオ127戸、1ベッドルーム98戸、2ベッドルーム30戸の賃貸住宅とし、1階にはリテール区画も設ける予定である。</p><p>ボストン市中心部ではコロナ禍以降のオフィス空室率上昇が課題となっており、市はオフィスの住宅転用を促すインセンティブ制度を推進している。</p><p>同物件は同制度の適用物件では最大規模であり、2027年1月着工、2028年後半の竣工を見込んでいる。</p></div>
+<a class="go" href="https://www.re-port.net/article/news/0000082627/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.re-port.net が開きます</div>
+</article>
+<article class="detail re" id="item-16" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">建設総合統計（令和8年6月分）</h2>
+<img class="dthumb" src="https://www.mlit.go.jp/common/001391890.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">国土交通省 報道発表</span><span>2026年8月17日</span></div>
+<div class="dsum"><p>国土交通省は、令和8年（2026年）6月分の建設総合統計を政府統計の総合窓口「e-Stat」に公表した。</p><p>建設総合統計は、国内の建設活動を出来高ベースで把握することを目的とした加工統計である。</p><p>建築着工統計調査と建設工事受注動態統計調査から得られる工事費額を着工ベースの金額として捉え、工事の進捗に合わせて月次の出来高に展開している。</p><p>これにより、月ごとの建設工事出来高を推計する仕組みとなっている。</p><p>毎年6月の4月分公表時には、確定した建設投資額の実績値から算出される直近の補正率を用いて、直前の3月分から過去3カ年分を遡及改定している。</p><p>算出に用いる基礎統計等の品質改善に対応して遡及改定する場合もあり、今回公表した値は今後変わり得るとしている。</p></div>
+<a class="go" href="https://www.mlit.go.jp/report/press/joho04_hh_001386.html" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.mlit.go.jp が開きます</div>
+</article>
+<article class="detail re" id="item-17" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">首都圏分譲マンション賃料、直近1年間の最高値更新</h2>
+<img class="dthumb" src="https://www.re-port.net/ogpimage.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">R.E.port</span><span>2026年8月17日</span></div>
+<div class="dsum"><p>東京カンテイは17日、2026年7月の三大都市圏における分譲マンション賃料の月別推移を公表した。</p><p>分譲マンションが賃貸された場合の募集賃料を1平方メートル当たりに換算して算出している。</p><p>首都圏の平均賃料は4,209円で、前月比0.4％上昇し2ヵ月連続で上昇した。</p><p>東京都は4,963円（同0.5％上昇）となり、2月に記録した直近1年間の最高値を上回った。</p><p>神奈川県は2,892円（同0.8％上昇）とプラスとなった一方、千葉県は2,240円（同0.1％下落）とわずかに弱含み、埼玉県はさいたま市の築浅事例増加を背景に2,368円（同5.2％上昇）と大幅に上昇した。</p><p>近畿圏は2,487円（同0.4％下落）と9ヵ月ぶりに下落し、中部圏も2,110円（同1.6％下落）と3ヵ月連続で下落した。</p></div>
+<a class="go" href="https://www.re-port.net/article/news/0000082622/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.re-port.net が開きます</div>
+</article>
+<article class="detail re" id="item-18" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">つくる地所、新富町にブティックホテル開業</h2>
+<img class="dthumb" src="https://www.re-port.net/picture_l/report/0000082629_02.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">R.E.port</span><span>2026年8月17日</span></div>
+<div class="dsum"><p>つくる地所（東京都港区）は17日、東京都中央区にブティックホテル「HOTEL ON／OFF」を開業した。</p><p>客室数は17室で、東レ建設との共同事業として整備された。</p><p>立地は東京メトロ有楽町線「新富町」駅から徒歩約3分、JR「東京」駅から徒歩約20分の場所である。</p><p>建物は鉄骨造地上10階建てで延床面積806.89平方メートル、客室は全室34平方メートルのツインタイプでクイーンサイズベッド2台を設置している。</p><p>宿泊料金は1室4万円（税込み）からで、企画立案から建設マネジメントまでをつくる地所が一貫して担当し、設計は東京アーキテクツアンドアソシエイツ、運営は7gardenが担当した。</p><p>同施設は今後、フュージョン資産マネジメントへ承継される予定となっている。</p></div>
+<a class="go" href="https://www.re-port.net/article/news/0000082629/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.re-port.net が開きます</div>
+</article>
+<article class="detail re" id="item-19" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">中東情勢、7割弱が「事業に影響」／長谷工LN</h2>
+<img class="dthumb" src="https://www.re-port.net/ogpimage.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">R.E.port</span><span>2026年8月17日</span></div>
+<div class="dsum"><p>長谷工ライブネットは17日、2026年6月に実施した「不動産投資に関する調査」の結果を発表した。</p><p>調査は2020年から実施され今回で7回目となり、アセットマネジメント会社やオーナーなど52社から回答を得た。</p><p>現在の不動産投資市場について「良い」以上との回答は計39％にとどまり、「どちらともいえない」が48％と前回より5ポイント増加した。</p><p>中東情勢による事業への影響については67％が「影響あり」と回答し、大規模修繕工事等での資材価格高騰による建築コスト上昇を挙げる声が62％で最多だった。</p><p>投資・開発を重点的に検討するエリアは東京都心が69％で最多となった一方、大阪市は31％と前回から14ポイント低下した。</p><p>過去1年間の賃貸マンションの契約更新では85％が賃料を増額し、都市部ほど増額の実施率が高い傾向がみられた。</p></div>
+<a class="go" href="https://www.re-port.net/article/news/0000082626/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.re-port.net が開きます</div>
+</article>
+<article class="detail re" id="item-20" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">【数社限定】「Japanese Garden TV(登録者19万人)」とともに庭園プロデュース事業の提供を開始</h2>
+<div class="dph"></div>
+<div class="dmeta"><span class="src">いえらぶニュース</span><span>2026年8月14日</span></div>
+<div class="dsum"><p>株式会社ZenGardenは、登録者数19万人のYouTubeチャンネル「Japanese Garden TV」とともに、庭園プロデュース事業の提供を開始した。</p><p>この取り組みは数社限定で行われるとされている。</p><p>発表は不動産・住宅関連のプレスリリースを扱ういえらぶニュースに掲載された。</p><p>いえらぶニュースは、企業や団体が発表するプレスリリースを原文のまま掲載するサイトである。</p><p>住まいや暮らしに関する最新情報や不動産業界を取り巻く社会・経済動向を発信し、住宅産業のトレンドを伝えている。</p><p>プレスリリースの内容に関する問い合わせは、掲載元の企業に直接行うよう案内されている。</p></div>
+<a class="go" href="https://news.ielove.co.jp/66197/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると news.ielove.co.jp が開きます</div>
+</article>
+<article class="detail re" id="item-21" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">【開催報告】社員主役の「AI事例共有会」を本格導入、現場発の自動化を“全社の共有知”へ--”AIを活用できる社内人材がいない、育てていない”の声に応えるLIFEFUNDの実践</h2>
+<div class="dph"></div>
+<div class="dmeta"><span class="src">いえらぶニュース</span><span>2026年8月14日</span></div>
+<div class="dsum"><p>株式会社LIFEFUNDは、社員が主役となる「AI事例共有会」を本格的に導入したと発表した。</p><p>現場から生まれた業務の自動化事例を、全社で共有できる知見へと発展させる取り組みである。</p><p>背景には「AIを活用できる社内人材がいない」「人材を育てていない」といった声があり、これに応える実践として位置づけられている。</p><p>この発表は不動産・住宅関連のプレスリリースを掲載するいえらぶニュースで報告された。</p><p>いえらぶニュースは、企業や団体のプレスリリースを原文のまま掲載し、住宅産業のトレンドを伝えるサイトである。</p><p>プレスリリースへの問い合わせは、掲載元の企業に直接行うよう案内されている。</p></div>
+<a class="go" href="https://news.ielove.co.jp/66193/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると news.ielove.co.jp が開きます</div>
+</article>
+<article class="detail re" id="item-22" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">2026年8月 CAPSレポート（マンション価格 &amp; 賃料）</h2>
+<div class="dph"></div>
+<div class="dmeta"><span class="src">いえらぶニュース</span><span>2026年8月14日</span></div>
+<div class="dsum"><p>株式会社MFSは、2026年8月分の「CAPSレポート」を発表した。</p><p>同レポートはマンション価格と賃料の動向をまとめたものである。</p><p>発表は不動産・住宅関連のプレスリリースを扱ういえらぶニュースに掲載された。</p><p>いえらぶニュースは、企業や団体が発表するプレスリリースを原文のまま掲載するサイトである。</p><p>住まいや暮らしに関する最新情報や不動産業界を取り巻く社会・経済動向を発信し、住宅産業のトレンドを伝えている。</p><p>レポートの内容に関する問い合わせは、掲載元の株式会社MFSに直接行うよう案内されている。</p></div>
+<a class="go" href="https://news.ielove.co.jp/66192/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると news.ielove.co.jp が開きます</div>
+</article>
+<article class="detail re" id="item-23" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">【浅香山駅徒歩13分】トランクルーム「スペラボ堺東店」が2026年9月1日にオープン！</h2>
+<div class="dph"></div>
+<div class="dmeta"><span class="src">いえらぶニュース</span><span>日付不明</span></div>
+<div class="dsum"><p>株式会社UKCorporationは、トランクルーム「スペラボ堺東店」を2026年9月1日にオープンすると発表した。</p><p>同店舗は浅香山駅から徒歩13分の場所に位置している。</p><p>発表は不動産・住宅関連のプレスリリースを扱ういえらぶニュースに掲載された。</p><p>いえらぶニュースは、企業や団体が発表するプレスリリースを原文のまま掲載するサイトである。</p><p>住まいや暮らしに関する最新情報や不動産業界を取り巻く社会・経済動向を発信し、住宅産業のトレンドを伝えている。</p><p>出店に関する問い合わせは、掲載元の株式会社UKCorporationに直接行うよう案内されている。</p></div>
+<a class="go" href="https://news.ielove.co.jp/66194/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると news.ielove.co.jp が開きます</div>
+</article>
+<article class="detail re" id="item-24" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
 <h2 class="dtitle">埼玉・鶴ヶ島市で第1号の空き家跡地を地域公園に タミヤホーム</h2>
 <img class="dthumb" src="https://cdn.jutaku-s.com/0cea2a77d3f4c293e4dcfca120ef39c8-640x452.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
@@ -242,7 +342,7 @@ footer{margin-top:30px;padding-top:15px;border-top:1px solid var(--line);
 <a class="go" href="https://www.jutaku-s.com/news/id/105064" target="_blank" rel="noopener">元記事を読む →</a>
 <div class="note">タップすると www.jutaku-s.com が開きます</div>
 </article>
-<article class="detail re" id="item-16" hidden>
+<article class="detail re" id="item-25" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
 <h2 class="dtitle">手軽なネットか地元のプロか！約半数が悩む「傾斜地の家」探し事情</h2>
 <div class="dph"></div>
@@ -251,16 +351,7 @@ footer{margin-top:30px;padding-top:15px;border-top:1px solid var(--line);
 <a class="go" href="https://news.ielove.co.jp/66199/" target="_blank" rel="noopener">元記事を読む →</a>
 <div class="note">タップすると news.ielove.co.jp が開きます</div>
 </article>
-<article class="detail re" id="item-17" hidden>
-<a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">不動産経済研 首都圏マンション 中央値8000万円台に 2026年上半期</h2>
-<img class="dthumb" src="https://cdn.jutaku-s.com/8841dc0df00fc44fdd8e5c843846d0c1-1053x630.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">住宅新報web</span><span>2026年8月14日</span></div>
-<div class="dsum"><p>不動産経済研究所が8月13日に公表した調査で、2026年上半期の首都圏新築分譲マンションの戸当たり価格の中央値は8040万円だった。</p><p>前期の2025年下半期の7017万円から1023万円、14.6％上昇し、全エリアで価格が上昇した。</p><p>特に千葉県は28.4％上昇して6868万円となり、上昇率が最も大きかった。</p><p>人件費の上昇に加え資材費や用地費の高騰もエリアを問わず続いており、中央値は半期ベースで7期連続の上昇となった。</p><p>2013年以降、施工費や用地の高騰、都心の高級物件やタワーマンションの供給増加、立地を厳選する傾向が価格上昇の要因となってきた。</p><p>2026年上半期には1都3県で2783戸の億ションが発売され、コストアップが全体の価格を押し上げた。</p></div>
-<a class="go" href="https://www.jutaku-s.com/news/id/105058" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると www.jutaku-s.com が開きます</div>
-</article>
-<article class="detail re" id="item-18" hidden>
+<article class="detail re" id="item-26" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
 <h2 class="dtitle">「空き家と起業者のマッチング50件超」「ひとり親世帯は家賃3割引き」など”負動産”を最強の地域資源に変える「地域価値を共創する不動産業アワード」受賞7組の常識破りな挑戦</h2>
 <img class="dthumb" src="https://suumo.jp/journal/wp/wp-content/uploads/2026/08/218964_main.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
@@ -269,79 +360,16 @@ footer{margin-top:30px;padding-top:15px;border-top:1px solid var(--line);
 <a class="go" href="https://suumo.jp/journal/2026/08/14/218964/" target="_blank" rel="noopener">元記事を読む →</a>
 <div class="note">タップすると suumo.jp が開きます</div>
 </article>
-<article class="detail re" id="item-19" hidden>
-<a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">絶景か危険か？4割が景色を絶賛も2割超は「魅力なし」と一刀両断</h2>
-<div class="dph"></div>
-<div class="dmeta"><span class="src">いえらぶニュース</span><span>2026年8月14日</span></div>
-<div class="dsum"><p>ドリームプランニングが運営する「負動産買取センター」が、傾斜地の家の魅力について不動産に興味を持つ500人にアンケート調査を実施した。</p><p>調査は2026年6月5日から7月4日にインターネットで行われ、単一回答形式で実施された。</p><p>最も多かった回答は「景色・眺望が良い」で38.2％、次いで「傾斜地の家に魅力を感じない」が21.8％だった。</p><p>3位は「価格が比較的安い」で11.6％、4位は「通風や採光が良い」で7.4％となった。</p><p>高台ならではの開放感や眺望を評価する声がある一方、土砂災害リスクや生活の不便さから魅力を感じないという意見も多く寄せられた。</p><p>調査結果から、傾斜地の家に対する期待とリスクへの警戒心が二極化している実態が明らかになった。</p></div>
-<a class="go" href="https://news.ielove.co.jp/66191/" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると news.ielove.co.jp が開きます</div>
-</article>
-<article class="detail re" id="item-20" hidden>
-<a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">ヒューリック、インド・デリー近郊で物流倉庫3物件に投資</h2>
-<img class="dthumb" src="https://www.re-port.net/ogpimage.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">R.E.port</span><span>2026年8月14日</span></div>
-<div class="dsum"><p>ヒューリックは13日、インド・デリー近郊の産業不動産「ファルクナガールPJ」「キジュリPJ」「ジャムワズPJ」の3物件に投資参画したと発表した。</p><p>投資はアジア有数のプライベート・エクイティ・ファンドHillhouseグループ傘下の産業・物流施設開発企業Logicap Management Pte. Ltd.との共同投資である。</p><p>同社との共同投資は2025年12月の「スリシティPJ」「ランジャンガオンPJ」に続き2件目となる。</p><p>今回参画した3物件はいずれもハリヤナ州に立地する高稼働の物流倉庫である。</p><p>ファルクナガールPJは敷地面積約17万727平方メートルで2022年に竣工済み、キジュリPJは約12万2,669平方メートルで2021年竣工、ジャムワズPJは約12万9,823平方メートルで25年に全体竣工した。</p><p>ヒューリックはインド国内で投資実績のあるLogicapとの協働により、さらなる物件価値の向上に取り組むとしている。</p></div>
-<a class="go" href="https://www.re-port.net/article/news/0000082616/" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると www.re-port.net が開きます</div>
-</article>
-<article class="detail re" id="item-21" hidden>
-<a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">仕入れ加速し営業増益／地主26年12月期2Q</h2>
-<img class="dthumb" src="https://www.re-port.net/ogpimage.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">R.E.port</span><span>2026年8月14日</span></div>
-<div class="dsum"><p>地主（株）は13日、2026年12月期第2四半期（26年1月1日～6月30日）の連結決算を発表した。</p><p>売上高は345億9,200万円（前年同期比13.1％減）、営業利益は44億1,600万円（同8.9％増）となった。</p><p>経常利益は32億5,800万円（同2.6％増）、当期純利益は20億9,200万円（同24.7％減）だった。</p><p>期中は新規仕入れと販売用不動産の売却を推進し、仕入れは契約ベースで494億円（前年同期比209億円増）に達した。</p><p>東証改革や投資家からの要請を背景とした企業の不動産売却やCRE戦略見直し、建築費上昇などが仕入れ増加の要因となった。</p><p>通期は売上高1,000億円、営業利益120億円、経常利益90億円、当期純利益80億円を見込んでいる。</p></div>
-<a class="go" href="https://www.re-port.net/article/news/0000082613/" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると www.re-port.net が開きます</div>
-</article>
-<article class="detail re" id="item-22" hidden>
-<a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">介護施設の月額利用料、20万円未満の回答が6割超</h2>
-<img class="dthumb" src="https://www.re-port.net/ogpimage.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">R.E.port</span><span>2026年8月14日</span></div>
-<div class="dsum"><p>（株）鎌倉新書と子会社の（株）エイジプラスは13日、「第2回 介護施設探しに関する実態調査（2026年）」を発表した。</p><p>施設情報の収集手段は「インターネット検索」が69.2％で最多、「ケアマネジャー」24.0％、「比較サイト・口コミサイト」18.3％が続いた。</p><p>資料請求数の平均は6.5件、見学数の平均は4.2件だった。</p><p>施設選びで重視した条件は「月額利用料」が60.6％でトップとなり、「立地・アクセス」が相談者・利用者ともに上位に入った。</p><p>一方、最終的な決定要因は「立地・アクセスが良かったから」が71.2％で最多、「月額料金が妥当だったから」44.1％が続いた。</p><p>月額利用料の予算は「15万～20万円未満」が31.7％で最多となり、20万円未満と回答した人は全体の6割以上を占めた。</p></div>
-<a class="go" href="https://www.re-port.net/article/news/0000082614/" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると www.re-port.net が開きます</div>
-</article>
-<article class="detail re" id="item-23" hidden>
-<a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">人生100年時代。住まいは「買うもの」から「育てるもの」へ。</h2>
-<div class="dph"></div>
-<div class="dmeta"><span class="src">いえらぶニュース</span><span>2026年8月14日</span></div>
-<div class="dsum"><p>本リリースは株式会社エヌアドが発表したものである。</p><p>いえらぶニュースは不動産・住宅に関する企業や団体などのプレスリリースを原文のまま掲載するサイトである。</p><p>住まいや暮らしに関する最新情報から不動産業界を取り巻く社会・経済動向を可視化し、住宅産業のトレンドを捉えるとしている。</p><p>住まい探しをしているユーザーだけでなく、不動産管理会社や仲介会社、オーナー、デベロッパーなど不動産に関わる全ての人向けの内容となっている。</p><p>プレスリリースに関する問い合わせは、各掲載元の会社に直接行うよう案内されている。</p><p>いえらぶは、利用者が理想に合った家を見つけられるよう応援するとしている。</p></div>
-<a class="go" href="https://news.ielove.co.jp/66195/" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると news.ielove.co.jp が開きます</div>
-</article>
-<article class="detail re" id="item-24" hidden>
-<a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">大幅な減収減益に／And DoHD26年6月期</h2>
-<img class="dthumb" src="https://www.re-port.net/ogpimage.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">R.E.port</span><span>2026年8月14日</span></div>
-<div class="dsum"><p>And Doホールディングスは14日、2026年6月期（25年7月〜26年6月）の連結決算を公表した。</p><p>売上高は496億1700万円で前期比23.4%減、営業利益は11億2000万円で同57.3%減となり、大幅な減収減益となった。</p><p>フランチャイズ事業では新規加盟契約が121件、加盟店舗数は累計733件、新規開店は111店となり、セグメント売上高は32億3400万円だった。</p><p>不動産販売事業は取引件数が1309件に増加したものの、大型案件の減少などで業績は当初計画を下回り、セグメント売上高は352億1900万円で同10.7%減となった。</p><p>注力事業の金融事業は順調に拡大した一方、縮小方針のハウス・リースバック事業は大幅な減収減益となった。</p><p>次期（27年6月期）は売上高450億円、営業利益14億円を見込んでいる。</p></div>
-<a class="go" href="https://www.re-port.net/article/news/0000082621/" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると www.re-port.net が開きます</div>
-</article>
-<article class="detail re" id="item-25" hidden>
-<a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">逆風の住宅市場で“縮小”ではなく“拡張”を――『BLUEPRINT 2036』の半年の進捗と次の一手を報告、LIFEFUNDが下期経営方針発表会を実施</h2>
-<div class="dph"></div>
-<div class="dmeta"><span class="src">いえらぶニュース</span><span>2026年8月14日</span></div>
-<div class="dsum"><p>本記事は株式会社LIFEFUNDが発表した「下期経営方針発表会」に関するプレスリリースである。</p><p>タイトルからは、中期経営計画『BLUEPRINT 2036』の半年間の進捗と、逆風の住宅市場下でも事業を拡張していく次の一手を報告する内容であることが示されている。</p><p>掲載元のいえらぶニュースは、不動産・住宅関連企業や団体のプレスリリースを原文のまま掲載するサイトである。</p><p>同サイトは住まい探しをするユーザーのほか、不動産管理会社や仲介会社、オーナー、デベロッパーなど不動産に関わる幅広い読者に向けて情報を発信している。</p><p>プレスリリースの内容に関する問い合わせは、掲載元の企業に直接行うよう案内されている。</p><p>なお、外部サイトへのリンクは閲覧時期によってリンク先が存在しない場合があるとの注意書きが添えられている。</p></div>
-<a class="go" href="https://news.ielove.co.jp/66196/" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると news.ielove.co.jp が開きます</div>
-</article>
-<article class="detail re" id="item-26" hidden>
-<a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">東京商工リサーチ調査、7月 不動産業の倒産件数は2カ月ぶり減</h2>
-<img class="dthumb" src="https://cdn.jutaku-s.com/c2b9e2ac2b5ee6cbfe42562558704bd7-640x427.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">住宅新報web</span><span>2026年8月12日</span></div>
-<div class="dsum"><p>東京商工リサーチは8月10日、2026年7月度の「不動産業の倒産状況」を公表した。</p><p>7月の倒産件数は26件で前年同月比23.5%減となり、2カ月ぶりに前年同月を下回った。</p><p>1〜7月の累計倒産件数は188件で前年同期比3.0%減となり、前年と同水準のペースで推移している。</p><p>このペースが続けば2年連続で年間300件を超える可能性が高いとしている。</p><p>7月の負債総額は33億9300万円で前年同月比66.2%減となり、2カ月ぶりに50億円を下回った。</p><p>負債10億円以上の大型倒産が発生しなかった一方、負債1億円未満の小規模倒産が20件で全体の76.9%を占めた。</p></div>
-<a class="go" href="https://www.jutaku-s.com/news/id/38783" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると www.jutaku-s.com が開きます</div>
-</article>
 <article class="detail re" id="item-27" hidden>
+<a class="back" href="#/">← 一覧に戻る</a>
+<h2 class="dtitle">建設業従事者、依頼断る理由の8割が「労務費」</h2>
+<img class="dthumb" src="https://www.re-port.net/ogpimage.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
+<div class="dmeta"><span class="src">R.E.port</span><span>2026年8月14日</span></div>
+<div class="dsum"><p>株式会社助太刀の調査部門・助太刀総研は14日、建設業従事者を対象にした「元請企業の選別」に関する実態調査を公表した。</p><p>4月25日から6月14日に「助太刀アプリ」内で調査し、有効回答数は292件だった。</p><p>直近1～2年で条件の合わない依頼を断った頻度は「頻繁にある」から「時々ある」までを合わせると47.9％に上った。</p><p>依頼を断った理由を複数回答で聞くと「単価（労務費）が低い」が82.8％で最多となり、「工期がタイト」38.1％、「支払い条件が悪い」34.8％が続いた。</p><p>元請企業からの労務費引き上げ提案・相談については「提案があった」13.3％、「相談に応じてくれた」39.0％で、過半が引き上げを実現できた。</p><p>一方で「相談できる環境ではない」40.9％、「拒否された」6.8％となり、単価引き上げに応じてもらえなかった回答も47.7％に上った。</p></div>
+<a class="go" href="https://www.re-port.net/article/news/0000082615/" target="_blank" rel="noopener">元記事を読む →</a>
+<div class="note">タップすると www.re-port.net が開きます</div>
+</article>
+<article class="detail re" id="item-28" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
 <h2 class="dtitle">【フラット35】の最新利用調査では、中古住宅での利用割合が増加！新築と中古の年収倍率に大きな開きも</h2>
 <img class="dthumb" src="https://suumo.jp/journal/wp/wp-content/uploads/2026/08/218826_main.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
@@ -350,7 +378,7 @@ footer{margin-top:30px;padding-top:15px;border-top:1px solid var(--line);
 <a class="go" href="https://suumo.jp/journal/2026/08/12/218826/" target="_blank" rel="noopener">元記事を読む →</a>
 <div class="note">タップすると suumo.jp が開きます</div>
 </article>
-<article class="detail re" id="item-28" hidden>
+<article class="detail re" id="item-29" hidden>
 <a class="back" href="#/">← 一覧に戻る</a>
 <h2 class="dtitle">建設工事受注動態統計調査報告（令和８年６月分）</h2>
 <img class="dthumb" src="https://www.mlit.go.jp/common/001391890.png" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
@@ -358,15 +386,6 @@ footer{margin-top:30px;padding-top:15px;border-top:1px solid var(--line);
 <div class="dsum"><p>国土交通省は令和8年8月10日、建設工事受注動態統計調査の令和8年6月分の結果を公表した。</p><p>この調査は建設業者の受注動向を発注者別、業種別、工事種類別、地域別に把握することを目的としている。</p><p>調査は建設業許可業者約48万業者のうち、約1万2千業者を対象に毎月実施されている。</p><p>令和3年度4月からは新しい推計方法による数値が公表されている。</p><p>公表資料には記者発表資料のほか、受注高や公共・民間工事の時系列データなどがPDFやExcel形式で用意されている。</p><p>過去分の統計資料はe-Statで閲覧できる。</p></div>
 <a class="go" href="https://www.mlit.go.jp/report/press/joho04_hh_001385.html" target="_blank" rel="noopener">元記事を読む →</a>
 <div class="note">タップすると www.mlit.go.jp が開きます</div>
-</article>
-<article class="detail re" id="item-29" hidden>
-<a class="back" href="#/">← 一覧に戻る</a>
-<h2 class="dtitle">旧五輪選手村「HARUMI FLAG」自治会がアツすぎる！ 多様な住人が本気スキルで挑む、盆踊り2万人集客や交通改善など“街の価値向上”戦略 東京・中央区</h2>
-<img class="dthumb" src="https://suumo.jp/journal/wp/wp-content/uploads/2026/07/218747_main.jpg" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;dph&quot;></div>'">
-<div class="dmeta"><span class="src">SUUMOジャーナル</span><span>2026年8月7日</span></div>
-<div class="dsum"><p>HARUMI FLAGは東京五輪の選手村跡地である中央区晴海5丁目を再生した複合プロジェクトで、約18haに24の住宅棟などが並ぶ。</p><p>2024年1月に入居が始まり同年5月に街開きし、現在は約5000世帯が暮らしている。</p><p>自治会は建物管理を担う管理組合とは別に2024年7月に発足し、24人の役員体制で荒瀬さんが会長を務めている。</p><p>活動財源は会費約730万円と中央区からの委託費約100万円を合わせた年約830万円で、防犯・防災・美化・交通など約10のプロジェクトを進めている。</p><p>2025年7月の第1回盆踊り大会は2日間で約2万人が来場し、屋台30店超が出店する盛況となった。</p><p>2026年の第2回は住民サークルの出店を認め屋台数を47に増やす計画で、告知にはPR TIMESを活用した。</p></div>
-<a class="go" href="https://suumo.jp/journal/2026/08/07/218747/" target="_blank" rel="noopener">元記事を読む →</a>
-<div class="note">タップすると suumo.jp が開きます</div>
 </article>
 
 </div>
